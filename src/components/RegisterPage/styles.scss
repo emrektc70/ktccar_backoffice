@@ -1,0 +1,140 @@
+
+.box-register{
+    position: absolute;
+    left: 35%;
+    top: 3%;
+    background-color: #6F6F6F;
+    border-radius: 20px;
+    width: 450px;
+    height: 620px;
+   
+}
+
+.title{
+    text-align: center;
+    align-items: center;
+    margin: 8px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.inputBox{
+    margin-top: 24px;
+    text-decoration: none;
+    width: 350px;
+    height: 350px;
+    margin-left: 50px;
+
+}
+
+.inputemail{
+    margin: 12px;
+    width: 300px;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 12px;
+    outline: none;
+    border: none;
+
+}
+
+.inputpassword{
+        margin: 16px;
+        width: 300px;
+        cursor: pointer;
+        text-decoration: none;
+        border-radius: 5px;
+        padding: 12px;
+        outline: none;
+        border: none;
+
+}
+
+.labelName{
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.resetPassword{
+    color: #ffffff;
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+    margin-bottom: 16px;
+    &:active {
+            opacity: 0.5;
+        }
+}
+
+.bottomBox{
+    display: flex; 
+    width: 350px;
+    justify-content: space-between;
+    margin-top: 24px;
+}
+
+.connexion{
+    background-color: #0166B1;
+    color: #ffffff;
+    width: 100px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    &:hover{
+        opacity: 0.8;
+        
+    }
+    &:active{
+        opacity: 0.5;
+    }
+
+}
+
+.register{
+    background-color: #ffffff;
+    color: #0166B1;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    &:hover {
+            opacity: 0.8;
+            
+        }
+    
+    &:active {
+            opacity: 0.5;
+        }
+    }
+    
+
+.test{
+    margin: 0 -50px 0 -50px !important
+}
+
+@media screen and (max-width: 600px) {
+
+    .box-register {
+        left: 0%;
+        top: 0%;
+        position: relative;
+        background-color: #6F6F6F;
+        border-radius: 20px;
+        width: 450px;
+        height: 620px;
+        zoom: 85%;
+
+    }
+.inputBox{
+    margin-top: 24px;
+    text-decoration: none;
+    width: 350px;
+    height: 350px;
+    margin-left: 50px;
+
+}
+
+}

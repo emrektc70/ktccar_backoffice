@@ -1,0 +1,43 @@
+.profilPage{
+    position: absolute;
+    top: 10px;
+    left: 350px;
+}
+
+.title{
+
+    margin-top: 54px;
+}
+
+.form{
+    margin-top: 54px;
+}
+
+.inputProfil{
+   width: 345px;
+   height: 35px;
+   background-color: #D9D9D9;
+   border-radius: 10px;
+   border: none;
+   padding-left: 16px;
+}
+
+.name{
+    margin: 16px 0;
+    display: flex;
+    flex-direction: column;
+}
+.firstName {
+    margin: 16px 0;
+    display: flex;
+    flex-direction: column;
+}
+.email {
+    margin: 16px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.labelName{
+    margin-bottom: 16px !important;
+}

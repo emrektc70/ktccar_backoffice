@@ -1,0 +1,39 @@
+.title{
+   // margin-left: 10px
+    position: relative;
+        padding: 0;
+        margin: 0;
+        font-family: "Raleway", sans-serif;
+        font-weight: 300;
+        font-size: 20px;
+        color: #080808;
+        -webkit-transition: all 0.4s ease 0s;
+        -o-transition: all 0.4s ease 0s;
+        transition: all 0.4s ease 0s;
+}
+
+.box{
+    max-width: 600px;
+    max-height: 300px;
+    background-color: #0068ff;
+    padding: 16px;
+    //box-shadow: 2px 2px 9px rgb(15, 11, 11);
+    border-radius: 20px;
+    color: #fff;
+
+}
+
+.titleBox{
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.description{
+    max-width: 500px;
+    margin-top: 16px;
+}
+
+.image{
+    
+}
