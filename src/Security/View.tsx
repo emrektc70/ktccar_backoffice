@@ -5,10 +5,10 @@ import styles from "./styles.module.scss";
 type Props = {
   children: React.ReactNode;
   isLog: boolean;
+  isPublicRoute: boolean;
 };
 
-const View: React.FC<Props> = ({ children, isLog }) => {
-  
+const View: React.FC<Props> = ({ children, isLog, isPublicRoute }) => {
   return <>{isLog ? children : <Test />}</>;
 };
 

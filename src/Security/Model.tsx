@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useEffect, useMemo } from "react";
 import { useLocation } from "react-router-dom";
 import View from "./View";
 import publicRoute from "./publicRoute";
@@ -7,10 +7,13 @@ import { PageEnum } from "../enum/pageEnum";
 type Props = {
   children: React.ReactNode;
   isLog: boolean;
+  token: string;
 };
 
-const ViewModel: React.FC<Props> = ({ children, isLog }) => {
+const ViewModel: React.FC<Props> = ({ children, isLog, token }) => {
   const location = useLocation();
+
+  console.log(token);
 
   const pathName = useMemo(() => {
     return location.pathname;
@@ -20,7 +23,23 @@ const ViewModel: React.FC<Props> = ({ children, isLog }) => {
     return publicRoute.includes(pathName as PageEnum);
   }, [pathName]);
 
-  return <View isLog={isLog}> {children} </View>;
+  var getToken = localStorage.getItem(token);
+
+  console.log(token);
+
+  useEffect(() => {
+    if (getToken === null || "") {
+      //isLog === false
+    }
+  }, [getToken]);
+
+  console.log(isPublicRoute);
+
+  return (
+    <View isLog={isLog} isPublicRoute={isPublicRoute}>
+      {children}
+    </View>
+  );
 };
 
 export default ViewModel;

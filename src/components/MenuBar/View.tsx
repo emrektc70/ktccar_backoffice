@@ -5,7 +5,7 @@ import Separator from "../Separator/view";
 
 const View = () => {
   const navigate = useNavigate();
-  const navigateLogin = () => {
+  const navigateHome = () => {
     navigate("/");
   };
   const navigateEvent = () => {
@@ -28,7 +28,7 @@ const View = () => {
       </div>
 
       <div className="categorie-box">
-        <div className="categorie" onClick={navigateLogin}>
+        <div className="categorie" onClick={navigateHome}>
           Accueil
         </div>
 
@@ -43,7 +43,9 @@ const View = () => {
         <div className="categorie" onClick={navigateAbout}>
           Contacter-nous
         </div>
-        <div className="profil" onClick={navigateProfil}>Profil</div>
+        <div className="profil" onClick={navigateProfil}>
+          Profil
+        </div>
       </div>
     </div>
   );

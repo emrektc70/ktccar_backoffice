@@ -40,7 +40,7 @@ function App() {
         }
       />
       <Route
-        path="/événement"
+        path={PageEnum.EVENT}
         element={
           <Security>
             <Event />
@@ -56,7 +56,7 @@ function App() {
         }
       />
       <Route
-        path="/chat"
+        path={PageEnum.MESSAGE}
         element={
           <Security>
             <Chatting />
@@ -64,7 +64,7 @@ function App() {
         }
       />
       <Route
-        path="/about"
+        path={PageEnum.ABOUT}
         element={
           <Security>
             <About />
