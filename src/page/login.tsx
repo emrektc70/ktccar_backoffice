@@ -1,4 +1,4 @@
-import PageLogin from "../components/LoginPage/View";
+import PageLogin from "../components/LoginPage";
 
 const loginPage = () => {
   return (

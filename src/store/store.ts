@@ -1,11 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
 import rootReducer from "../reducers";
 import apiMiddleware from "../middleware/message";
+import authenticationMiddleware from "../middleware/authentification";
 
 const store = configureStore({
   reducer: rootReducer,
   middleware: (getDefaultMiddleware) => [
     apiMiddleware,
+    authenticationMiddleware,
     ...getDefaultMiddleware({
       serializableCheck: false,
     }),

@@ -4,35 +4,25 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
 
-type Props = {};
+type Props = {
+  loginData: VoidFunction;
+  password: string;
+  email: string;
+  handleChangeEmail: (e: React.BaseSyntheticEvent) => void;
+  handleChangePassword: (e: React.BaseSyntheticEvent) => void;
+};
 
-const View: React.FC<Props> = () => {
+const View: React.FC<Props> = ({
+  loginData,
+  password,
+  email,
+  handleChangeEmail,
+  handleChangePassword,
+}) => {
   const navigate = useNavigate();
 
   const navigateRegister = () => {
     navigate("/register");
-  };
-
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
-
-  const handleLogin = () => {
-    axios({
-      url: "http://localhost:3110/auth/login",
-      method: "POST",
-      data: {
-        email: email,
-        password: password,
-      },
-    })
-      .then((res) => {
-        console.log(res.data);
-      })
-      .catch((err) => {
-        console.log(err.response.data);
-        setError(err.response.data);
-      });
   };
 
   return (
@@ -47,7 +37,7 @@ const View: React.FC<Props> = () => {
             className="inputemail"
             placeholder="Entre votre email"
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={handleChangeEmail}
           />
           <label className="labelName">Mot de passe: </label>
           <input
@@ -55,7 +45,7 @@ const View: React.FC<Props> = () => {
             className="inputpassword"
             placeholder="Entre votre mot de passe"
             value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={handleChangePassword}
           />
           <div className="resetPassword"> Mot de passe oublié</div>
           <div className="test">
@@ -65,8 +55,8 @@ const View: React.FC<Props> = () => {
             <div className="register" onClick={navigateRegister}>
               Créer un compte
             </div>
-            {error && <div> {error}</div>}
-            <div className="connexion" onClick={handleLogin}>
+
+            <div className="connexion" onClick={loginData}>
               Se connecter
             </div>
           </div>
