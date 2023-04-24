@@ -7,9 +7,9 @@ const authenticationMiddleware =
       case POST_LOGIN:
         try {
           const { email, password } = store.getState().authentication;
-          console.log(email, password);
           const res = await getLogin(email, password);
           console.log(res);
+          return res;
         } catch (error) {
           console.dir(error);
         }

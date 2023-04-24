@@ -1,8 +1,6 @@
 import "./styles.scss";
 import Separator from "../Separator/view";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
-import axios from "axios";
 
 type Props = {
   loginData: VoidFunction;

@@ -13,7 +13,7 @@ const initialState: State = {
   email: "",
 };
 
-const authenticationReducur = (
+const authenticationReducer = (
   state = initialState,
   action: AnyAction
 ): State => {
@@ -28,4 +28,4 @@ const authenticationReducur = (
   }
 };
 
-export default authenticationReducur;
+export default authenticationReducer;

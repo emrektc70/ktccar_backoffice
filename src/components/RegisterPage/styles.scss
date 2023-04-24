@@ -6,7 +6,7 @@
     background-color: #6F6F6F;
     border-radius: 20px;
     width: 450px;
-    height: 620px;
+    height: 665px;
    
 }
 
@@ -25,6 +25,14 @@
     height: 350px;
     margin-left: 50px;
 
+}
+
+input::placeholder {
+    font-weight: bold;
+    opacity: 0.5;
+    color: rgb(50, 49, 49);
+    font-size: 12px;
+    font-family: Arial, sans-serif;
 }
 
 .inputemail{
@@ -80,6 +88,8 @@
     width: 100px;
     padding: 10px;
     cursor: pointer;
+    align-items: center;
+    display: flex;
     border-radius: 10px;
     &:hover{
         opacity: 0.8;

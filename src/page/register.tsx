@@ -1,4 +1,4 @@
-import PageRegister from "../components/RegisterPage/view";
+import PageRegister from "../components/RegisterPage";
 
 const registerPage = () => {
   return (
