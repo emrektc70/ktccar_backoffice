@@ -1,5 +1,4 @@
-import ChatComp from "../components/ChatComp/View";
-import Event from "../components/EventPage/View";
+import ChatComp from "../components/ChatComp";
 
 const chatPage = () => {
   return (

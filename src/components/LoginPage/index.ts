@@ -20,6 +20,7 @@ const mapDispatchToProps = (dispatch: Dispatch) => ({
     dispatch(postLogin());
   },
   changeAuthentificationFields: (field: string, value: any) => {
+    console.log(field, value)
     dispatch(changeAuthentificationFields(field, value));
   },
 });

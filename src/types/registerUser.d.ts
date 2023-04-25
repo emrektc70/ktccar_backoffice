@@ -1,5 +1,5 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-type registerUser = {
+type RegisterUser = {
     firstName: string,
     passwordRegister: string,
     emailRegister: string,
