@@ -7,7 +7,9 @@ import ViewModel from "./Model";
 import { getGroupes } from "../../actions/groupe";
 
 // eslint-disable-next-line no-unused-vars
-const mapStateToProps = (state: RootState) => ({});
+const mapStateToProps = (state: RootState) => ({
+  groupes: state.groupe.groupes
+});
 
 // eslint-disable-next-line no-unused-vars
 const mapDispatchToProps = (dispatch: Dispatch) => ({

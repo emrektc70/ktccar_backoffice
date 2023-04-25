@@ -2,8 +2,10 @@ import styles from "./styles.module.scss";
 import MenuBar from "../MenuBar/View";
 import ChatBox from "../componentsktccar/chatBox/View";
 
-type Props = {};
-const View: React.FC<Props> = () => {
+type Props = {
+  groupes: any[];
+};
+const View: React.FC<Props> = ({ groupes }) => {
   return (
     <div className={styles.chatBar}>
       <MenuBar />
@@ -19,7 +21,7 @@ const View: React.FC<Props> = () => {
           </div>
 
           <div className={styles.boxGroup}>
-            <ChatBox />
+            <ChatBox groupes={groupes} />
           </div>
         </div>
       </div>

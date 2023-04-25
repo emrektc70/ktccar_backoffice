@@ -2,11 +2,11 @@ import { AnyAction } from "redux";
 import { SET_GROUPE_FIELDS } from "../actions/groupe";
 
 type State = {
-
+    groupes: any[]
 };
 
 const initialState: State = {
-
+    groupes: []
 };
 
 const groupesReducer = (

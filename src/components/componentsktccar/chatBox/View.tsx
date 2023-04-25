@@ -1,40 +1,23 @@
 import styles from "./styles.module.scss";
 
-type Props = {};
+type Props = {
+  groupes: any[];
+};
 
-const View: React.FC<Props> = () => {
+const View: React.FC<Props> = ({ groupes }) => {
   return (
     <div className={styles.box}>
-      <div className={styles.content}>
-        <h3> Title: Bmw</h3>
-        <p> Ce situe a Lyon avec plus de 600 personnes </p>
-        <div className={styles.join}>Rejoindre</div>
-      </div>
-      <div className={styles.content}>
-        <h3> Title: Audi</h3>
-        <p> Ce situe a Lyon avec plus de 600 personnes </p>
-        <div className={styles.join}>Rejoindre</div>
-      </div>
-      <div className={styles.content}>
-        <h3> Title: Mercedes-Benz</h3>
-        <p> Ce situe a Lyon avec plus de 600 personnes </p>
-        <div className={styles.join}>Rejoindre</div>
-      </div>
-      <div className={styles.content}>
-        <h3> Title: Bmw</h3>
-        <p> Ce situe a Lyon avec plus de 600 personnes </p>
-        <div className={styles.join}>Rejoindre</div>
-      </div>
-      <div className={styles.content}>
-        <h3> Title: Audi</h3>
-        <p> Ce situe a Lyon avec plus de 600 personnes </p>
-        <div className={styles.join}>Rejoindre</div>
-      </div>
-      <div className={styles.content}>
-        <h3> Title: Mercedes-Benz</h3>
-        <p> Ce situe a Lyon avec plus de 600 personnes </p>
-        <div className={styles.join}>Rejoindre</div>
-      </div>
+      {groupes.map((groupe) => (
+        <div className={styles.content}>
+          <>
+            <h3> Nom du groupe: {groupe.groupName}</h3>
+            <p>
+              Nombre dans le groupe: {groupe.nbUser} / {groupe.capacity}
+            </p>
+            <div className={styles.join}>Rejoindre</div>
+          </>
+        </div>
+      ))}
     </div>
   );
 };
