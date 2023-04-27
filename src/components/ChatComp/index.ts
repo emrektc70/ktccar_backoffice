@@ -26,7 +26,4 @@ const mapDispatchToProps = (dispatch: Dispatch) => ({
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ViewModel);
-function handleClickJoinGroupe(id: number): any {
-  throw new Error("Function not implemented.");
-}
 

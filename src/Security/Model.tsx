@@ -13,8 +13,6 @@ type Props = {
 const ViewModel: React.FC<Props> = ({ children, isLog, token }) => {
   const location = useLocation();
 
-  console.log(token);
-
   const pathName = useMemo(() => {
     return location.pathname;
   }, [location]);
@@ -24,8 +22,6 @@ const ViewModel: React.FC<Props> = ({ children, isLog, token }) => {
   }, [pathName]);
 
   var getToken = localStorage.getItem(token);
-
-  console.log(token);
 
   useEffect(() => {
     if (getToken === null || "") {

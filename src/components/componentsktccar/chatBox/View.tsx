@@ -1,4 +1,5 @@
 import styles from "./styles.module.scss";
+import { Button } from "@material-ui/core";
 
 type Props = {
   groupes: any[];
@@ -15,10 +16,13 @@ const View: React.FC<Props> = ({ groupes, handleClickJoinGroupe }) => {
             <p>
               Nombre dans le groupe: {groupe.nbUser} / {groupe.capacity}
             </p>
-            <div
-              className={styles.join}
-              onClick={handleClickJoinGroupe(groupe.id)}>
-              Rejoindre
+            <div className={styles.join}>
+              <Button
+                variant="contained"
+                className={styles.button}
+                onClick={handleClickJoinGroupe(groupe.id)}>
+                Rejoindre
+              </Button>
             </div>
           </>
         </div>

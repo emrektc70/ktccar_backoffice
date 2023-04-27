@@ -1,6 +1,5 @@
 import View from "./View";
-import { useEffect, useMemo } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
 
 type Props = {
   getGroupes: () => void;
@@ -13,9 +12,6 @@ const ViewModel: React.FC<Props> = ({ getGroupes, groupes, postGroupeId }) => {
     getGroupes();
   }, [getGroupes]);
 
-  const groupeName = useMemo(() => {}, []);
-
-  console.log(groupes, "testtt");
   return <View groupes={groupes} postGroupeId={postGroupeId} />;
 };
 

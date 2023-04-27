@@ -4,11 +4,13 @@ import { SET_GROUPE_FIELDS } from "../actions/groupe";
 type State = {
     groupes: any[];
     id: number;
+    groupeData: any
 };
 
 const initialState: State = {
     groupes: [],
     id: 0,
+    groupeData: null
 };
 
 const groupesReducer = (

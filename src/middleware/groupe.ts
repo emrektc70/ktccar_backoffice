@@ -12,7 +12,8 @@ const groupesMiddleware =
                 break
             }
             case POST_GROUPE_ID: {
-                const groudId = await postGroupeId(action.id)
+                const { groupeData } = store.getState().groupe
+                const groudId = await postGroupeId(action.id, groupeData)
                 console.log(groudId)
                 break
             }

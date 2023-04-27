@@ -1,6 +1,7 @@
 import styles from "./styles.module.scss";
 import MenuBar from "../MenuBar/View";
 import ChatBox from "../componentsktccar/chatBox";
+import { TextField } from "@material-ui/core";
 
 type Props = {
   groupes: any[];
@@ -12,11 +13,13 @@ const View: React.FC<Props> = ({ groupes, postGroupeId }) => {
       <MenuBar />
       <div className={styles.chatPage}>
         <div className={styles.searchBar}>
-          <input
-            type="search"
-            placeholder="Recherche "
+          <TextField
+            id="standard-basic"
+            label="Recherche"
+            variant="standard"
             className={styles.search}
           />
+
           <div className={styles.title}>
             <h2> Groupe disponibles</h2>
           </div>
