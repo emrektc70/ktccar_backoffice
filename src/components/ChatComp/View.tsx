@@ -1,11 +1,12 @@
 import styles from "./styles.module.scss";
 import MenuBar from "../MenuBar/View";
-import ChatBox from "../componentsktccar/chatBox/View";
+import ChatBox from "../componentsktccar/chatBox";
 
 type Props = {
   groupes: any[];
+  postGroupeId: (id: number) => void;
 };
-const View: React.FC<Props> = ({ groupes }) => {
+const View: React.FC<Props> = ({ groupes, postGroupeId }) => {
   return (
     <div className={styles.chatBar}>
       <MenuBar />

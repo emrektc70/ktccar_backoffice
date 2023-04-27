@@ -1,6 +1,6 @@
 import { UserOutDto } from "./UserOutputDto";
 
-export interface GroupOutputDto {
+declare type GroupOutputDto = {
     id: number;
     createdAt: string;
     groupName: string;

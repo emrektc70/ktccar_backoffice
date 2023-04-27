@@ -1,4 +1,4 @@
-export interface ImageOutputDto {
+declare type ImageOutputDto = {
     id: number;
     file_name: string;
     small: string

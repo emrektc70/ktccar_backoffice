@@ -1,4 +1,4 @@
-export interface CredentialsInputDto {
+declare type CredentialsInputDto = {
     email: string,
     password: string
 }

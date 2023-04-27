@@ -1,6 +1,6 @@
 import { ImageOutputDto } from "./ImageOutputDto";
 
-export interface EventOutputDto {
+declare type EventOutputDto = {
     id: number;
     name: string;
     image: ImageOutputDto;

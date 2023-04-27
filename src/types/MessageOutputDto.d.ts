@@ -1,6 +1,6 @@
 import { UserOutputDto } from "./UserOutputDto";
 
-export interface MessageOutputDto {
+declare type MessageOutputDto = {
     id: number;
     message: string;
     group: GroupOutputDto;

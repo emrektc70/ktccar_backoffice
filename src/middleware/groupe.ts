@@ -1,5 +1,6 @@
-import { GET_GROUPES, changeGroupeFields } from "../actions/groupe";
+import { GET_GROUPES, POST_GROUPE_ID, changeGroupeFields } from "../actions/groupe";
 import getGroupe from "../api/groupe/getGroupes";
+import postGroupeId from "../api/groupe/postGroupesId";
 
 
 const groupesMiddleware =
@@ -8,7 +9,11 @@ const groupesMiddleware =
             case GET_GROUPES: {
                 const groupe = await getGroupe()
                 store.dispatch(changeGroupeFields('groupes', groupe))
-                console.log(groupe)
+                break
+            }
+            case POST_GROUPE_ID: {
+                const groudId = await postGroupeId(action.id)
+                console.log(groudId)
                 break
             }
             default:

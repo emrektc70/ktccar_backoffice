@@ -1,4 +1,4 @@
-export interface XGroupUserOutputDto {
+declare type XGroupUserOutputDto = {
     id: number
     isAccepted: boolean
     user: UserOutputDto

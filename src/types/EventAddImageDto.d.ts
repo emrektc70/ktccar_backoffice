@@ -1,3 +1,3 @@
-export interface EventAddImageDto {
+declare type EventAddImageDto = {
     image_id: number
 }

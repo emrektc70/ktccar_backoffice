@@ -1,4 +1,5 @@
-export interface CreateEventDto {
+
+declare type CreateEventDto = {
     name: string;
     description: string;
     startDate: string;

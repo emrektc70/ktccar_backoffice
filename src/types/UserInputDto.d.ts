@@ -1,4 +1,4 @@
-export interface UserInputDto {
+declare type UserInputDto = {
     firstName: string;
     lastName: string;
     email: string;

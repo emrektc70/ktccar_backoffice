@@ -2,9 +2,10 @@ import styles from "./styles.module.scss";
 
 type Props = {
   groupes: any[];
+  handleClickJoinGroupe: (id: number) => VoidFunction;
 };
 
-const View: React.FC<Props> = ({ groupes }) => {
+const View: React.FC<Props> = ({ groupes, handleClickJoinGroupe }) => {
   return (
     <div className={styles.box}>
       {groupes.map((groupe) => (
@@ -14,7 +15,11 @@ const View: React.FC<Props> = ({ groupes }) => {
             <p>
               Nombre dans le groupe: {groupe.nbUser} / {groupe.capacity}
             </p>
-            <div className={styles.join}>Rejoindre</div>
+            <div
+              className={styles.join}
+              onClick={handleClickJoinGroupe(groupe.id)}>
+              Rejoindre
+            </div>
           </>
         </div>
       ))}
