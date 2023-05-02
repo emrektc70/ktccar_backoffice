@@ -1,17 +1,5 @@
-export const GET_MESSAGES = "GET_MESSAGES";
-export const GET_MESSAGES_SUCCESS = "GET_MESSAGES_SUCCESS";
-export const GET_MESSAGES_FAILURE = "GET_MESSAGES_FAILURE";
+export const POST_MESSAGES = "POST_MESSAGES";
 
-export const getMessages = () => ({
-  type: GET_MESSAGES,
-});
-
-export const getMessagesSuccess = (data: any) => ({
-  type: GET_MESSAGES_SUCCESS,
-  payload: data,
-});
-
-export const getMessagesFailure = (error: any) => ({
-  type: GET_MESSAGES_FAILURE,
-  payload: error,
+export const postMessages = () => ({
+  type: POST_MESSAGES,
 });

@@ -3,3 +3,61 @@
     margin-top: 40px;
     font-family: "Arial", sans-serif;
 }
+
+.head {
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    left: 325px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.name {
+    position: absolute;
+    width: 140px;
+    padding: 8px 2px;
+    left: 130px;
+    background: #0166B1;
+    border-radius: 10px;
+    text-align: center;
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+.leave {
+    position: absolute;
+    width: 140px;
+    padding: 8px 2px;
+    left: 330px;
+    background: #E31111;
+    border-radius: 10px;
+    text-align: center;
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+.effectif {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+}
+
+.messageInput {
+    position: fixed;
+    bottom: 0px;
+    left: 325px;
+    width: 100vh;
+}
