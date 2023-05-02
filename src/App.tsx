@@ -11,6 +11,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./page/home";
 import { PageEnum } from "./enum/pageEnum";
 import Security from "./Security";
+import ChatGroup from "./components/componentsktccar/chatBox/ChatGroup";
 
 function App() {
   return (
@@ -36,6 +37,14 @@ function App() {
         element={
           <Security>
             <Register />
+          </Security>
+        }
+      />
+      <Route
+        path={PageEnum.CHATFIELD}
+        element={
+          <Security>
+            <ChatGroup />
           </Security>
         }
       />

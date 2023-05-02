@@ -16,6 +16,8 @@ const ViewModel: React.FC<Props> = ({ groupes, postGroupeId }) => {
     [postGroupeId]
   );
 
+  console.log(groupes);
+
   return (
     <View groupes={groupes} handleClickJoinGroupe={handleClickJoinGroupe} />
   );
