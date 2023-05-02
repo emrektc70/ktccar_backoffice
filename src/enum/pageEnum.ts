@@ -6,5 +6,5 @@ export enum PageEnum {
   MESSAGE = "/chat",
   EVENT = "/événement",
   ABOUT = "/about",
-  CHATFIELD = "chat/{id}/group"
+  CHATFIELD = "/chat/:id/group"
 }

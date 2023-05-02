@@ -1,5 +1,7 @@
 import { useCallback } from "react";
 import View from "./View";
+import { useNavigate } from "react-router-dom";
+
 
 type Props = {
   groupes: any[];
@@ -7,11 +9,14 @@ type Props = {
 };
 
 const ViewModel: React.FC<Props> = ({ groupes, postGroupeId }) => {
+
+  const navigation = useNavigate()
+
   const handleClickJoinGroupe = useCallback(
     (id: number) => () => {
-      //const idGroupe = groupes.find((item) => item.id);
       console.log("hello", id);
       postGroupeId(id);
+      navigation(`/chat/${id}/group`)
     },
     [postGroupeId]
   );
