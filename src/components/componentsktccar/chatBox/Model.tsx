@@ -14,14 +14,12 @@ const ViewModel: React.FC<Props> = ({ groupes, postGroupeId }) => {
 
   const handleClickJoinGroupe = useCallback(
     (id: number) => () => {
-      console.log("hello", id);
       postGroupeId(id);
       navigation(`/chat/${id}/group`)
     },
     []
   );
 
-  console.log(groupes);
 
   return (
     <View groupes={groupes} handleClickJoinGroupe={handleClickJoinGroupe} />

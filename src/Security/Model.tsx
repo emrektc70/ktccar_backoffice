@@ -29,7 +29,6 @@ const ViewModel: React.FC<Props> = ({ children, isLog, token }) => {
     }
   }, [getToken]);
 
-  console.log(isPublicRoute);
 
   return (
     <View isLog={isLog} isPublicRoute={isPublicRoute}>

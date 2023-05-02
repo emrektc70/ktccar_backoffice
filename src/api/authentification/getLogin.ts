@@ -6,7 +6,6 @@ const getLogin = async (email: string, password: string) => {
       email,
       password,
     });
-    console.log(response.data);
     return response.data;
   } catch (error) {
     console.error(error);

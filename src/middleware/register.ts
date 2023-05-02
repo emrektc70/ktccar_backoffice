@@ -16,7 +16,6 @@ const registerMiddleware =
             "password": register.passwordRegister,
           }
 
-          console.log(action, 'action', store)
           const res = await postRegister(data);
           store.dispatch(changeRegisterFields("firstName", res.firstName));
           store.dispatch(changeRegisterFields("passwordRegister", res.password));
