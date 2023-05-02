@@ -18,7 +18,7 @@ const ViewModel: React.FC<Props> = ({ groupes, postGroupeId }) => {
       postGroupeId(id);
       navigation(`/chat/${id}/group`)
     },
-    [postGroupeId]
+    []
   );
 
   console.log(groupes);

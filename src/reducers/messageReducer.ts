@@ -1,19 +1,16 @@
-import { GET_MESSAGES, ADD_MESSAGE, MessageActionType } from "../types/types";
-import { Message } from "../types/message";
+import { AnyAction } from "redux";
 
-const initialState: Message[] = [];
+
+type State = {};
+const initialState: State = {};
 
 const messageReducer = (
   state = initialState,
-  action: MessageActionType
-): Message[] => {
+  action: AnyAction
+): State => {
   switch (action.type) {
-    case GET_MESSAGES:
-      return action.value;
-    case ADD_MESSAGE:
-      return [...state, action.value];
     default:
-      return state;
+      return state as State;
   }
 };
 
