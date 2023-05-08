@@ -1,4 +1,5 @@
 import { POST_LOGIN } from "../actions/authentification";
+import { changeSecurityFields } from "../actions/security";
 import getLogin from "../api/authentification/getLogin";
 
 const authenticationMiddleware =
@@ -9,8 +10,8 @@ const authenticationMiddleware =
           const { email, password } = store.getState().authentication;
           const res = await getLogin(email, password);
           sessionStorage.setItem('token', res.access_token);
+          store.dispatch(changeSecurityFields('isLog', true))
 
-          return res;
         } catch (error) {
           console.dir(error);
         }

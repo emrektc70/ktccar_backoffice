@@ -5,6 +5,7 @@ type State = {
   token: string;
   password: string;
   email: string;
+
 };
 
 const initialState: State = {

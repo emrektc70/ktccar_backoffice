@@ -1,15 +1,21 @@
 import { AnyAction } from "redux";
+import { SET_SECURITY_FIELDS } from "../actions/security";
 
 type State = {
   isLog: boolean;
 };
 
 const initialState: State = {
-  isLog: true,
+  isLog: false,
 };
 
 const securityReducer = (state = initialState, action: AnyAction): State => {
   switch (action.type) {
+    case SET_SECURITY_FIELDS:
+      return {
+        ...state,
+        [action.field]: action.value,
+      } as State;
     default:
       return state as State;
   }

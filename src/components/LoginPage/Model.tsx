@@ -1,4 +1,4 @@
-import { useCallback } from "react";
+import { useCallback, useEffect } from "react";
 import View from "./View";
 
 type Props = {
@@ -6,6 +6,8 @@ type Props = {
   password: string;
   email: string;
   changeAuthentificationFields: ReduxUniversalSetter;
+  changeSecurityFields: ReduxUniversalSetter;
+  isLog: boolean;
 };
 
 const ViewModel: React.FC<Props> = ({
@@ -13,6 +15,8 @@ const ViewModel: React.FC<Props> = ({
   password,
   email,
   changeAuthentificationFields,
+  changeSecurityFields,
+  isLog,
 }) => {
   const loginData = useCallback(() => {
     postLogin();
@@ -31,6 +35,10 @@ const ViewModel: React.FC<Props> = ({
     },
     [changeAuthentificationFields]
   );
+
+  useEffect(() => {
+    changeSecurityFields("isLog", false)
+  }, [changeSecurityFields])
 
   return (
     <View

@@ -1,5 +1,5 @@
-import { useEffect, useMemo } from "react";
-import { useLocation } from "react-router-dom";
+import { useEffect, useMemo, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import View from "./View";
 import publicRoute from "./publicRoute";
 import { PageEnum } from "../enum/pageEnum";
@@ -11,6 +11,10 @@ type Props = {
 };
 
 const ViewModel: React.FC<Props> = ({ children, isLog, token }) => {
+  const [checkIsLog, setCheckIsLog] = useState<boolean>(false)
+
+  const navigation = useNavigate()
+
   const location = useLocation();
 
   const pathName = useMemo(() => {
@@ -21,17 +25,22 @@ const ViewModel: React.FC<Props> = ({ children, isLog, token }) => {
     return publicRoute.includes(pathName as PageEnum);
   }, [pathName]);
 
-  var getToken = localStorage.getItem(token);
+  useEffect(() => {
+    const getToken = sessionStorage.getItem('token');
+    if (!isPublicRoute && !getToken) {
+      navigation(`/login`)
+    }
+    setCheckIsLog(false)
+  }, [checkIsLog, isLog, pathName]);
 
   useEffect(() => {
-    if (getToken === null || "") {
-      //isLog === false
+    console.log(isLog, checkIsLog)
+    if (isLog && !checkIsLog) {
+      navigation(`/`)
     }
-  }, [getToken]);
-
-
+  }, [isLog, checkIsLog])
   return (
-    <View isLog={isLog} isPublicRoute={isPublicRoute}>
+    <View isLog={isLog} isPublicRoute={isPublicRoute} checkIsLog={checkIsLog} >
       {children}
     </View>
   );
