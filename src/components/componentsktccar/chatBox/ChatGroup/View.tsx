@@ -3,9 +3,14 @@ import MenuBar from "../../../MenuBar/View";
 import TextField from '@mui/material/TextField';
 
 
-type Props = {};
+type Props = {
+  handlePostMessages: VoidFunction;
+  handleClickMessage: (e: React.BaseSyntheticEvent) => void;
+  message: string
+};
 
-const View: React.FC<Props> = () => {
+const View: React.FC<Props> = ({ handlePostMessages, handleClickMessage, message }) => {
+
   return (
     <div>
       <MenuBar />
@@ -27,9 +32,13 @@ const View: React.FC<Props> = () => {
       <div className={styles.messageInput}>
         <TextField
           label="Ecrit t'on message"
-          //defaultValue="Default Value"
           variant="standard"
+          onChange={handleClickMessage}
+          value={message}
         />
+        <div onClick={handlePostMessages}>
+          Envoyer
+        </div>
       </div>
     </div>
   );

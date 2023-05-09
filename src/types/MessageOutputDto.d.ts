@@ -1,4 +1,3 @@
-import { UserOutputDto } from "./UserOutputDto";
 
 declare type MessageOutputDto = {
     id: number;

@@ -1,4 +1,4 @@
-import { POST_MESSAGES } from "../actions/message";
+import { POST_MESSAGES, changeMessageFields } from "../actions/message";
 import httpPostMessages from "../api/message/httpPostMessages";
 
 const messageMiddleware =
@@ -6,12 +6,14 @@ const messageMiddleware =
     switch (action.type) {
 
       case POST_MESSAGES: {
-
-        const message = await httpPostMessages()
-        console.log(message)
+        const { message, isPin, groupId } = store.getState().message
+        const res = await httpPostMessages({ message, isPin, groupId })
+        store.dispatch(changeMessageFields('message', res.message))
+        store.dispatch(changeMessageFields('groupId', res.group.id))
+        store.dispatch(changeMessageFields('isPin', res.isPin))
+        console.log(res.message, 'test message ')
         break
       }
-
       default:
         next(action);
     }
