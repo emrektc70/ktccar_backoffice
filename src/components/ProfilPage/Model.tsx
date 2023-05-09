@@ -1,10 +1,69 @@
 import View from "./View";
-import { useEffect } from "react";
+import { useCallback, useEffect, useMemo } from "react";
+import jwt_decode from "jwt-decode";
+import { useNavigate } from "react-router-dom";
 
-type Props = {};
 
-const ViewModel: React.FC<Props> = () => {
-  return <View />;
+
+type Props = {
+  isLog: boolean;
+  changeSecurityFields: ReduxUniversalSetter;
+  getUserId: (id: string) => void;
+  firstName: string;
+  lastName: string;
+  userName: string;
+  id: string;
+  changeUserField: (field: string, value: any) => void
+};
+
+const ViewModel: React.FC<Props> = ({
+  isLog,
+  changeSecurityFields,
+  getUserId,
+  firstName,
+  lastName,
+  userName,
+  id,
+  changeUserField
+}) => {
+
+  const token = sessionStorage.getItem('token')
+  const navigation = useNavigate()
+
+
+  const tokenDecode = useMemo(() => {
+    if (token) {
+      return jwt_decode<TokenUser>(token);
+    }
+    return null;
+  }, [token]);
+
+
+  useEffect(() => {
+    if (tokenDecode) {
+      const idToken = tokenDecode.id
+      const stringId = idToken.toString()
+      changeUserField('id', stringId)
+      getUserId(id)
+    } else {
+      navigation(`/login`)
+    }
+    // a modifier
+  }, [getUserId, tokenDecode, id, changeUserField])
+
+  const handleClickSignOut = useCallback(() => {
+    sessionStorage.clear()
+    localStorage.clear()
+    changeSecurityFields('isLog', false)
+  }, [changeSecurityFields])
+
+  return <View
+    handleClickSignOut={handleClickSignOut}
+    firstName={firstName}
+    lastName={lastName}
+    userName={userName}
+
+  />;
 };
 
 export default ViewModel;

@@ -34,7 +34,6 @@ const ViewModel: React.FC<Props> = ({ children, isLog, token }) => {
   }, [checkIsLog, isLog, pathName]);
 
   useEffect(() => {
-    console.log(isLog, checkIsLog)
     if (isLog && !checkIsLog) {
       navigation(`/`)
     }
