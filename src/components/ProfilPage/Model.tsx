@@ -1,7 +1,8 @@
 import View from "./View";
 import { useCallback, useEffect, useMemo } from "react";
-import jwt_decode from "jwt-decode";
 import { useNavigate } from "react-router-dom";
+import jwt_decode from "jwt-decode";
+
 
 
 
@@ -49,7 +50,7 @@ const ViewModel: React.FC<Props> = ({
       navigation(`/login`)
     }
     // a modifier
-  }, [getUserId, tokenDecode, id, changeUserField])
+  }, [getUserId, tokenDecode, id, changeUserField, navigation])
 
   const handleClickSignOut = useCallback(() => {
     sessionStorage.clear()

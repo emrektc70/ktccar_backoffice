@@ -31,13 +31,13 @@ const ViewModel: React.FC<Props> = ({ children, isLog, token }) => {
       navigation(`/login`)
     }
     setCheckIsLog(false)
-  }, [checkIsLog, isLog, pathName]);
+  }, [checkIsLog, isLog, isPublicRoute, navigation, pathName]);
 
   useEffect(() => {
     if (isLog && !checkIsLog) {
       navigation(`/`)
     }
-  }, [isLog, checkIsLog])
+  }, [isLog, checkIsLog, navigation])
   return (
     <View isLog={isLog} isPublicRoute={isPublicRoute} checkIsLog={checkIsLog} >
       {children}

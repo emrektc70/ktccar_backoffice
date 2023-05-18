@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./styles.scss";
 
 interface SlideshowProps {
@@ -26,17 +26,18 @@ function Slideshow({ images }: SlideshowProps) {
 
   return (
     <div className="cointenerSlide">
+      <div onClick={handlePrevious} className="beforBtn">
+        {`${'<'}`}
+      </div>
       <img
         src={images[currentIndex]}
         alt="Slideshow"
         style={{ height: "300px ", width: "500px" }}
       />
-      <div onClick={handlePrevious} className="beforBtn">
-        N
-      </div>
       <div onClick={handleNext} className="afterBtn">
-        P
+        {`${'>'}`}
       </div>
+
     </div>
   );
 }
