@@ -35,13 +35,16 @@ const View: React.FC<Props> = ({
           </div>
         </div>
       </div>
-      <div className={styles.chat}>
-        {
-          messageChat.map((messageChat: any) =>
-            <Message messageChat={messageChat} />
-          )
-        }
-      </div>
+      {
+        messageChat &&
+        <div className={styles.chat}>
+          {
+            messageChat.map((messageChat: any) =>
+              <Message messageChat={messageChat} />
+            )
+          }
+        </div>
+      }
       <div className={styles.messageInput}>
         <div className={styles.contentInput}>
           <TextField

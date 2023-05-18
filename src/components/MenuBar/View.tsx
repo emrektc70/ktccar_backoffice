@@ -33,31 +33,27 @@ const View = () => {
       <div className="categorie-box">
         <div className="categorie" onClick={navigateHome}>
           <div className="row">
-            <HomeOutlinedIcon />
-          </div>
-          <div className="text">
             Accueil
           </div>
+          <HomeOutlinedIcon />
         </div>
         <div className="categorie" onClick={navigateEvent}>
           <div className="row">
-            <DateRangeOutlinedIcon />
-          </div>
-          <div className="text">
             Actualité
           </div>
+          <DateRangeOutlinedIcon />
         </div>
         <div className="categorie" onClick={navigateChat}>
           <div className="row">
-            <ChatBubbleOutlineOutlinedIcon />
+            Chat
           </div>
-          Chat
+          <ChatBubbleOutlineOutlinedIcon />
         </div>
         <div className="categorie" onClick={navigateProfil}>
           <div className="row">
-            <AccountBoxOutlinedIcon />
+            Profil
           </div>
-          Profil
+          <AccountBoxOutlinedIcon />
         </div>
       </div>
     </div>

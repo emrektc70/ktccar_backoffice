@@ -20,7 +20,8 @@ const messageMiddleware =
         const { groupId } = store.getState().message
         const res = await httpGetMessage(groupId)
         store.dispatch(changeMessageFields('messageChat', res))
-        console.log(res)
+        console.log(groupId)
+        //console.log(res)
 
         break
       }

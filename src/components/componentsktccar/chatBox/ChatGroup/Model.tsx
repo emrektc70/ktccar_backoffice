@@ -25,10 +25,6 @@ const ViewModel: React.FC<Props> = ({
     getMessages()
   }, [getMessages])
 
-  const url = new URL(window.location.href)
-  const pathname = url.pathname;
-  const segments = pathname.split('/');
-  const numero = segments[segments.length - 2];
 
   const handleClickMessage = useCallback((e: React.BaseSyntheticEvent) => {
     const value = e.target.value
@@ -36,10 +32,16 @@ const ViewModel: React.FC<Props> = ({
   }, [changeMessageFields])
 
   const handlePostMessages = useCallback(() => {
+    const url = new URL(window.location.href)
+    const pathname = url.pathname;
+    const segments = pathname.split('/');
+    const numero = segments[segments.length - 2];
     changeMessageFields('groupId', numero)
     changeMessageFields('isPin', false)
     postMessages()
   }, [changeMessageFields])
+
+
 
   return (
     <View
