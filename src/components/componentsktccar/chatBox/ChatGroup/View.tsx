@@ -1,15 +1,22 @@
 import styles from "./styles.module.scss";
 import MenuBar from "../../../MenuBar/View";
 import TextField from '@mui/material/TextField';
+import Message from "./Message";
 
 
 type Props = {
   handlePostMessages: VoidFunction;
   handleClickMessage: (e: React.BaseSyntheticEvent) => void;
-  message: string
+  message: string;
+  messageChat: any
 };
 
-const View: React.FC<Props> = ({ handlePostMessages, handleClickMessage, message }) => {
+const View: React.FC<Props> = ({
+  handlePostMessages,
+  handleClickMessage,
+  message,
+  messageChat
+}) => {
 
   return (
     <div>
@@ -28,16 +35,25 @@ const View: React.FC<Props> = ({ handlePostMessages, handleClickMessage, message
           </div>
         </div>
       </div>
-
+      <div className={styles.chat}>
+        {
+          messageChat.map((messageChat: any) =>
+            <Message messageChat={messageChat} />
+          )
+        }
+      </div>
       <div className={styles.messageInput}>
-        <TextField
-          label="Ecrit t'on message"
-          variant="standard"
-          onChange={handleClickMessage}
-          value={message}
-        />
-        <div onClick={handlePostMessages}>
-          Envoyer
+        <div className={styles.contentInput}>
+          <TextField
+            label="Ecrit t'on message"
+            variant="standard"
+            onChange={handleClickMessage}
+            value={message}
+            className={styles.input}
+          />
+          <div onClick={handlePostMessages}>
+            Envoyer
+          </div>
         </div>
       </div>
     </div>

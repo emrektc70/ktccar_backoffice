@@ -7,12 +7,15 @@ type State = {
   message: string;
   groupId: number;
   isPing: boolean;
+  messageChat: any
+
 };
 const initialState: State = {
   messageResponse: undefined,
   message: '',
   groupId: 0,
-  isPing: false
+  isPing: false,
+  messageChat: undefined,
 };
 
 const messageReducer = (

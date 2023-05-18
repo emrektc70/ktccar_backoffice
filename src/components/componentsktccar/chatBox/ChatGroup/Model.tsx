@@ -1,4 +1,4 @@
-import { useCallback } from "react";
+import { useCallback, useEffect } from "react";
 import View from "./View";
 
 type Props = {
@@ -6,10 +6,24 @@ type Props = {
   message: string;
   groupId: string;
   isPin: boolean;
-  changeMessageFields: ReduxUniversalSetter
+  changeMessageFields: ReduxUniversalSetter;
+  messageChat: any;
+  getMessages: VoidFunction;
+
 };
 
-const ViewModel: React.FC<Props> = ({ postMessages, message, groupId, isPin, changeMessageFields }) => {
+const ViewModel: React.FC<Props> = ({
+  postMessages,
+  message,
+  groupId,
+  isPin,
+  changeMessageFields,
+  messageChat,
+  getMessages
+}) => {
+  useEffect(() => {
+    getMessages()
+  }, [getMessages])
 
   const url = new URL(window.location.href)
   const pathname = url.pathname;
@@ -22,17 +36,20 @@ const ViewModel: React.FC<Props> = ({ postMessages, message, groupId, isPin, cha
   }, [changeMessageFields])
 
   const handlePostMessages = useCallback(() => {
-    console.log(message, groupId, isPin)
     changeMessageFields('groupId', numero)
     changeMessageFields('isPin', false)
     postMessages()
   }, [changeMessageFields])
 
-  return <View
-    handlePostMessages={handlePostMessages}
-    handleClickMessage={handleClickMessage}
-    message={message}
-  />;
+  return (
+    <View
+      handlePostMessages={handlePostMessages}
+      handleClickMessage={handleClickMessage}
+      message={message}
+      messageChat={messageChat}
+    />
+  )
+
 };
 
 export default ViewModel;

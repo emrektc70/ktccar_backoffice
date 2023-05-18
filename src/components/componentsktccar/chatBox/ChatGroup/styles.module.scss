@@ -57,7 +57,29 @@
 
 .messageInput {
     position: fixed;
-    bottom: 0px;
+    bottom: 8px;
     left: 325px;
-    width: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.contentInput {
+    width: 500px;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+}
+
+.input {
+    width: 100%;
+    max-width: 100%;
+}
+
+.chat {
+    position: absolute;
+    bottom: 100px;
+    left: 350px;
 }
