@@ -14,4 +14,5 @@ export const postMessages = () => ({
 
 export const getMessages = () => ({
   type: GET_MESSAGE,
+
 })

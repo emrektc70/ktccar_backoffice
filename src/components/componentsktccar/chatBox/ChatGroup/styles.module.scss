@@ -13,6 +13,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 10;
+    background-color: #fff
 }
 
 .name {
@@ -62,7 +64,15 @@
     display: flex;
     align-items: center;
     overflow: hidden;
+    background-color: #fff;
+    width: 100%;
+    height: 50px;
+    justify-content: flex-start;
+    z-index: 10;
 }
+
+
+
 
 .contentInput {
     width: 500px;
@@ -80,6 +90,16 @@
 
 .chat {
     position: absolute;
-    bottom: 100px;
+    bottom: 72px;
     left: 350px;
+    display: flex;
+    flex-direction: column-reverse;
+    overflow-y: scroll;
+    height: 100vw;
+    max-height: 100%;
+}
+
+::-webkit-scrollbar {
+    width: 0.5em;
+    background-color: transparent;
 }

@@ -8,8 +8,7 @@ type Props = {
   isPin: boolean;
   changeMessageFields: ReduxUniversalSetter;
   messageChat: any;
-  getMessages: VoidFunction;
-
+  getMessages: VoidFunction
 };
 
 const ViewModel: React.FC<Props> = ({
@@ -21,9 +20,10 @@ const ViewModel: React.FC<Props> = ({
   messageChat,
   getMessages
 }) => {
+
   useEffect(() => {
     getMessages()
-  }, [getMessages])
+  }, [])
 
 
   const handleClickMessage = useCallback((e: React.BaseSyntheticEvent) => {
@@ -36,10 +36,14 @@ const ViewModel: React.FC<Props> = ({
     const pathname = url.pathname;
     const segments = pathname.split('/');
     const numero = segments[segments.length - 2];
+
     changeMessageFields('groupId', numero)
     changeMessageFields('isPin', false)
     postMessages()
-  }, [changeMessageFields])
+  }, [changeMessageFields, postMessages])
+
+
+  console.log(groupId, 'test grouyp id')
 
 
 

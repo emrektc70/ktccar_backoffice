@@ -6,7 +6,7 @@ type Props = {
 };
 
 const ViewModel: React.FC<Props> = ({ messageChat }) => {
-  console.log(messageChat);
+
   return <View messageChat={messageChat} />;
 };
 
