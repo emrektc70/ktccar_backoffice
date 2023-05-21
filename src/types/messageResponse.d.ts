@@ -1,6 +1,6 @@
 
 declare type MessageResponse = {
     message: string;
-    groupId: number;
+    group_id: number;
     isPin: boolean;
 }

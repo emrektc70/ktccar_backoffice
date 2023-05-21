@@ -6,7 +6,9 @@ import { postGroupeId } from "../../../actions/groupe";
 import { changeMessageFields } from "../../../actions/message";
 
 // eslint-disable-next-line no-unused-vars
-const mapStateToProps = (state: any) => ({});
+const mapStateToProps = (state: any) => ({
+    group_id: state.message.group_id
+});
 
 // eslint-disable-next-line no-unused-vars
 const mapDispatchToProps = (dispatch: Dispatch) => ({

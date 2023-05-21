@@ -7,7 +7,8 @@ type State = {
   message: string;
   groupId: number;
   isPing: boolean;
-  messageChat: any
+  messageChat: any;
+  group_id: number;
 
 };
 const initialState: State = {
@@ -16,6 +17,7 @@ const initialState: State = {
   groupId: 0,
   isPing: false,
   messageChat: undefined,
+  group_id: 0
 };
 
 const messageReducer = (

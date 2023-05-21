@@ -7,8 +7,8 @@ const messageMiddleware =
     switch (action.type) {
 
       case POST_MESSAGES: {
-        const { message, isPin, groupId } = store.getState().message
-        const res = await httpPostMessages({ message, isPin, groupId })
+        const { message, isPin, group_id } = store.getState().message
+        const res = await httpPostMessages({ message, isPin, group_id })
         store.dispatch(changeMessageFields('message', res.message))
         // store.dispatch(changeMessageFields('groupId', res.group.id))
         store.dispatch(changeMessageFields('isPin', res.isPin))
@@ -17,8 +17,8 @@ const messageMiddleware =
       }
 
       case GET_MESSAGE: {
-        const { groupId } = store.getState().message
-        const res = await httpGetMessage(groupId)
+        const { group_id } = store.getState().message
+        const res = await httpGetMessage(group_id)
         store.dispatch(changeMessageFields('messageChat', res))
         break
       }

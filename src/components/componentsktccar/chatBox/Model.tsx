@@ -6,10 +6,11 @@ import { useNavigate } from "react-router-dom";
 type Props = {
   groupes: any[];
   postGroupeId: (id: number) => void;
-  changeMessageFields: ReduxUniversalSetter
+  changeMessageFields: ReduxUniversalSetter;
+  group_id: number
 };
 
-const ViewModel: React.FC<Props> = ({ groupes, postGroupeId, changeMessageFields }) => {
+const ViewModel: React.FC<Props> = ({ groupes, postGroupeId, changeMessageFields, group_id }) => {
 
   const navigation = useNavigate()
 
@@ -17,9 +18,9 @@ const ViewModel: React.FC<Props> = ({ groupes, postGroupeId, changeMessageFields
     (id: number) => () => {
       postGroupeId(id);
       navigation(`/chat/${id}/group`)
-      changeMessageFields('groupId', id)
+      changeMessageFields('group_id', id)
     },
-    [postGroupeId, changeMessageFields]
+    [postGroupeId, changeMessageFields, group_id]
   );
 
 
