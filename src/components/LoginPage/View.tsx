@@ -1,6 +1,7 @@
 import "./styles.scss";
 import Separator from "../Separator/view";
 import { useNavigate } from "react-router-dom";
+import TextField from "@mui/material/TextField";
 
 type Props = {
   loginData: VoidFunction;
@@ -26,25 +27,35 @@ const View: React.FC<Props> = ({
   return (
     <div className="content-login">
       <div className="box">
-        <div className="title"> S'inscrire </div>
+        <div className="title"> Se connecter </div>
         <Separator />
         <div className="inputBox">
-          <label className="labelName">Email: </label>
-          <input
+          {/*  <label className="labelName">Email: </label> */}
+          {/*   <input
             type="email"
             className="inputemail"
             placeholder="Entre votre email"
             value={email}
             onChange={handleChangeEmail}
+          /> */}
+          <TextField id="filled-basic" label="email" variant="filled" className="inputemail" value={email} onChange={handleChangeEmail}
+            style={{ background: "#fff" }} fullWidth
+
           />
-          <label className="labelName">Mot de passe: </label>
-          <input
+
+          {/*           <label className="labelName">Mot de passe: </label>*/}
+          {/*   <input
             type="password"
             className="inputpassword"
             placeholder="Entre votre mot de passe"
             value={password}
             onChange={handleChangePassword}
-          />
+          /> */}
+          <div className="boxPassword">
+            <TextField id="filled-basic" label="Mot de passe" variant="filled" className="inputpassword"
+              value={password} onChange={handleChangePassword} style={{ background: "#fff" }} fullWidth type="password" />
+          </div>
+
           <div className="resetPassword"> Mot de passe oublié</div>
           <div className="test">
             <Separator />

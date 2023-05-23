@@ -1,5 +1,4 @@
-
-.box{
+.box {
     position: absolute;
     left: 35%;
     top: 20%;
@@ -7,10 +6,10 @@
     border-radius: 20px;
     width: 450px;
     height: 370px;
-   
+
 }
 
-.title{
+.title {
     text-align: center;
     align-items: center;
     margin: 8px;
@@ -18,7 +17,7 @@
     text-transform: uppercase;
 }
 
-.inputBox{
+.inputBox {
     margin-top: 24px;
     text-decoration: none;
     width: 350px;
@@ -27,7 +26,7 @@
 
 }
 
-.inputemail{
+.inputemail {
     margin: 12px;
     width: 300px;
     cursor: pointer;
@@ -36,62 +35,67 @@
     padding: 12px;
     outline: none;
     border: none;
+    margin-bottom: 24px;
+    color: #fff;
 
 }
 
-.inputpassword{
-        margin: 16px;
-        width: 300px;
-        cursor: pointer;
-        text-decoration: none;
-        border-radius: 5px;
-        padding: 12px;
-        outline: none;
-        border: none;
-
+.inputpassword {
+    margin: 16px;
+    width: 300px;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 12px;
+    outline: none;
+    border: none;
+    margin-top: 24px;
 }
 
-.labelName{
+.labelName {
     color: #ffffff;
     text-transform: uppercase;
 }
 
-.resetPassword{
+.resetPassword {
     color: #ffffff;
     display: flex;
     justify-content: flex-end;
     cursor: pointer;
     margin-bottom: 16px;
+
     &:active {
-            opacity: 0.5;
-        }
+        opacity: 0.5;
+    }
 }
 
-.bottomBox{
-    display: flex; 
+.bottomBox {
+    display: flex;
     width: 350px;
     justify-content: space-between;
     margin-top: 24px;
 }
 
-.connexion{
+.connexion {
     background-color: #0166B1;
     color: #ffffff;
     width: 100px;
     padding: 10px;
     cursor: pointer;
     border-radius: 10px;
-    &:hover{
+
+    &:hover {
         opacity: 0.8;
-        
+
     }
-    &:active{
+
+    &:active {
         opacity: 0.5;
     }
 
 }
 
-.register{
+.register {
     background-color: #ffffff;
     color: #0166B1;
     justify-content: flex-end;
@@ -100,19 +104,24 @@
     padding: 10px;
     cursor: pointer;
     border-radius: 10px;
-    &:hover {
-            opacity: 0.8;
-            
-        }
-    
-    &:active {
-            opacity: 0.5;
-        }
-    }
-    
 
-.test{
+    &:hover {
+        opacity: 0.8;
+
+    }
+
+    &:active {
+        opacity: 0.5;
+    }
+}
+
+
+.test {
     margin: 0 -50px 0 -50px !important
+}
+
+.boxPassword {
+    margin-top: 36px;
 }
 
 @media screen and (max-width: 600px) {
