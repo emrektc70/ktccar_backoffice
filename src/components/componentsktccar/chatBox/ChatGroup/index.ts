@@ -8,7 +8,8 @@ const mapStateToProps = (state: any) => ({
     message: state.message.message,
     isPin: state.message.isPin,
     groupId: state.message.groupId,
-    messageChat: state.message.messageChat
+    messageChat: state.message.messageChat,
+    group_id: state.message.group_id,
 });
 
 // eslint-disable-next-line no-unused-vars

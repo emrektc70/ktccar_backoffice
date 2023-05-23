@@ -9,10 +9,9 @@ const messageMiddleware =
       case POST_MESSAGES: {
         const { message, isPin, group_id } = store.getState().message
         const res = await httpPostMessages({ message, isPin, group_id })
-        store.dispatch(changeMessageFields('message', res.message))
+        store.dispatch(changeMessageFields('message', ''))
         // store.dispatch(changeMessageFields('groupId', res.group.id))
         store.dispatch(changeMessageFields('isPin', res.isPin))
-        console.log('test message ')
         break
       }
 

@@ -8,7 +8,6 @@ type Props = {
 
 const View: React.FC<Props> = ({ messageChat }) => {
 
-  console.log(messageChat, 'emre test');
   return (
     <div className={styles.contentMessage}>
       <div className={styles.messageBox}>

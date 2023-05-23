@@ -8,7 +8,8 @@ type Props = {
   isPin: boolean;
   changeMessageFields: ReduxUniversalSetter;
   messageChat: any;
-  getMessages: VoidFunction
+  getMessages: VoidFunction;
+  group_id: number
 };
 
 const ViewModel: React.FC<Props> = ({
@@ -18,12 +19,13 @@ const ViewModel: React.FC<Props> = ({
   isPin,
   changeMessageFields,
   messageChat,
-  getMessages
+  getMessages,
+  group_id
 }) => {
 
   useEffect(() => {
     getMessages()
-  }, [])
+  }, [getMessages, group_id])
 
 
   const handleClickMessage = useCallback((e: React.BaseSyntheticEvent) => {
@@ -43,8 +45,7 @@ const ViewModel: React.FC<Props> = ({
   }, [changeMessageFields, postMessages])
 
 
-  console.log(groupId, 'test grouyp id')
-
+  console.log(message)
 
 
   return (
