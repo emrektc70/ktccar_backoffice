@@ -38,7 +38,7 @@ const ViewModel: React.FC<Props> = ({
 
   useEffect(() => {
     changeSecurityFields("isLog", false)
-  }, [changeSecurityFields])
+  }, [changeSecurityFields, isLog])
 
   return (
     <View

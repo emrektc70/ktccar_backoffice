@@ -20,7 +20,7 @@ const ViewModel: React.FC<Props> = ({ groupes, postGroupeId, changeMessageFields
       navigation(`/chat/${id}/group`)
       changeMessageFields('group_id', id)
     },
-    [postGroupeId, changeMessageFields, group_id]
+    [postGroupeId, navigation, changeMessageFields]
   );
 
 

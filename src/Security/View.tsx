@@ -14,8 +14,6 @@ const View: React.FC<Props> = ({ children, isLog, isPublicRoute, checkIsLog }) =
     {
       !checkIsLog && children
     }
-
-
   </>;
 };
 

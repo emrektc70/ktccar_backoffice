@@ -4,8 +4,6 @@ import { useNavigate } from "react-router-dom";
 import jwt_decode from "jwt-decode";
 
 
-
-
 type Props = {
   isLog: boolean;
   changeSecurityFields: ReduxUniversalSetter;
@@ -56,6 +54,8 @@ const ViewModel: React.FC<Props> = ({
     sessionStorage.clear()
     localStorage.clear()
     changeSecurityFields('isLog', false)
+    navigation(`/login`)
+
   }, [changeSecurityFields])
 
   return <View
