@@ -8,14 +8,18 @@ type Props = {
   handlePostMessages: VoidFunction;
   handleClickMessage: (e: React.BaseSyntheticEvent) => void;
   message: string;
-  messageChat: any
+  messageChat: any;
+  effective: number;
+  capacity: number
 };
 
 const View: React.FC<Props> = ({
   handlePostMessages,
   handleClickMessage,
   message,
-  messageChat
+  messageChat,
+  effective,
+  capacity
 }) => {
 
   return (
@@ -31,7 +35,7 @@ const View: React.FC<Props> = ({
             Quitter le groupe
           </div>
           <div className={styles.effectif}>
-            11/800
+            {effective}/{capacity}
           </div>
         </div>
       </div>

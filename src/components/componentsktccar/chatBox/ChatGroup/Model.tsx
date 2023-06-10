@@ -1,4 +1,4 @@
-import { useCallback, useEffect } from "react";
+import { useCallback, useEffect, useMemo } from "react";
 import View from "./View";
 
 type Props = {
@@ -9,7 +9,11 @@ type Props = {
   changeMessageFields: ReduxUniversalSetter;
   messageChat: any;
   getMessages: VoidFunction;
-  group_id: number
+  group_id: number;
+  changeGroupeFields: ReduxUniversalSetter;
+  groupes: any[];
+  effective: number;
+  capacity: number
 };
 
 const ViewModel: React.FC<Props> = ({
@@ -20,13 +24,16 @@ const ViewModel: React.FC<Props> = ({
   changeMessageFields,
   messageChat,
   getMessages,
-  group_id
+  group_id,
+  changeGroupeFields,
+  groupes,
+  effective,
+  capacity
 }) => {
 
   useEffect(() => {
     getMessages()
   }, [getMessages, group_id])
-
 
   const handleClickMessage = useCallback((e: React.BaseSyntheticEvent) => {
     const value = e.target.value
@@ -43,12 +50,26 @@ const ViewModel: React.FC<Props> = ({
     postMessages()
   }, [changeMessageFields, postMessages])
 
+  const groupeDetails = useMemo(() =>
+    groupes.filter((details) => details.id === group_id),
+    [group_id, groupes]);
+
+  useEffect(() => {
+    changeGroupeFields('effective', groupeDetails[0].nbUser)
+    changeGroupeFields('capacity', groupeDetails[0].capacity)
+  }, [changeGroupeFields, groupeDetails])
+
+  console.log(capacity, effective)
+
+
   return (
     <View
       handlePostMessages={handlePostMessages}
       handleClickMessage={handleClickMessage}
       message={message}
       messageChat={messageChat}
+      capacity={capacity}
+      effective={effective}
     />
   )
 

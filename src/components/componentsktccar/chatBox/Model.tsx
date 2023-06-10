@@ -7,11 +7,19 @@ type Props = {
   groupes: any[];
   postGroupeId: (id: number) => void;
   changeMessageFields: ReduxUniversalSetter;
-  group_id: number
+
+
 };
 
-const ViewModel: React.FC<Props> = ({ groupes, postGroupeId, changeMessageFields, group_id }) => {
+const ViewModel: React.FC<Props> = ({
+  groupes,
+  postGroupeId,
+  changeMessageFields,
 
+}) => {
+
+
+  console.log(groupes);
   const navigation = useNavigate()
 
   const handleClickJoinGroupe = useCallback(
@@ -22,7 +30,6 @@ const ViewModel: React.FC<Props> = ({ groupes, postGroupeId, changeMessageFields
     },
     [postGroupeId, navigation, changeMessageFields]
   );
-
 
   return (
     <View groupes={groupes} handleClickJoinGroupe={handleClickJoinGroupe} />

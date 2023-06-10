@@ -7,7 +7,8 @@ import { changeMessageFields } from "../../../actions/message";
 
 // eslint-disable-next-line no-unused-vars
 const mapStateToProps = (state: any) => ({
-    group_id: state.message.group_id
+    group_id: state.message.group_id,
+
 });
 
 // eslint-disable-next-line no-unused-vars
@@ -18,6 +19,7 @@ const mapDispatchToProps = (dispatch: Dispatch) => ({
     changeMessageFields: (field: string, value: any) => {
         dispatch(changeMessageFields(field, value))
     },
+
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ViewModel);

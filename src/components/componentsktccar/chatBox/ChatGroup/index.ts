@@ -2,6 +2,7 @@ import { connect } from "react-redux";
 import { Dispatch } from "redux";
 import ViewModel from "./Model";
 import { changeMessageFields, getMessages, postMessages } from "../../../../actions/message";
+import { changeGroupeFields } from "../../../../actions/groupe";
 
 // eslint-disable-next-line no-unused-vars
 const mapStateToProps = (state: any) => ({
@@ -10,6 +11,9 @@ const mapStateToProps = (state: any) => ({
     groupId: state.message.groupId,
     messageChat: state.message.messageChat,
     group_id: state.message.group_id,
+    effective: state.groupe.effective,
+    capacity: state.groupe.capacity,
+    groupes: state.groupe.groupes
 });
 
 // eslint-disable-next-line no-unused-vars
@@ -22,6 +26,9 @@ const mapDispatchToProps = (dispatch: Dispatch) => ({
     },
     getMessages: () => {
         dispatch(getMessages());
+    },
+    changeGroupeFields: (field: string, value: any) => {
+        dispatch(changeGroupeFields(field, value))
     }
 });
 
