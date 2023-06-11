@@ -13,7 +13,8 @@ const mapStateToProps = (state: any) => ({
     group_id: state.message.group_id,
     effective: state.groupe.effective,
     capacity: state.groupe.capacity,
-    groupes: state.groupe.groupes
+    groupes: state.groupe.groupes,
+    groupName: state.groupe.groupName,
 });
 
 // eslint-disable-next-line no-unused-vars

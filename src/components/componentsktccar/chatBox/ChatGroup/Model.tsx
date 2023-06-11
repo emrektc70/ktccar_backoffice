@@ -13,7 +13,8 @@ type Props = {
   changeGroupeFields: ReduxUniversalSetter;
   groupes: any[];
   effective: number;
-  capacity: number
+  capacity: number;
+  groupName: string
 };
 
 const ViewModel: React.FC<Props> = ({
@@ -28,7 +29,8 @@ const ViewModel: React.FC<Props> = ({
   changeGroupeFields,
   groupes,
   effective,
-  capacity
+  capacity,
+  groupName
 }) => {
 
   useEffect(() => {
@@ -57,10 +59,8 @@ const ViewModel: React.FC<Props> = ({
   useEffect(() => {
     changeGroupeFields('effective', groupeDetails[0].nbUser)
     changeGroupeFields('capacity', groupeDetails[0].capacity)
+    changeGroupeFields('groupName', groupeDetails[0].groupName)
   }, [changeGroupeFields, groupeDetails])
-
-  console.log(capacity, effective)
-
 
   return (
     <View
@@ -70,6 +70,7 @@ const ViewModel: React.FC<Props> = ({
       messageChat={messageChat}
       capacity={capacity}
       effective={effective}
+      groupName={groupName}
     />
   )
 

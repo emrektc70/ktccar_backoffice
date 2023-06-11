@@ -2,6 +2,7 @@ import styles from "./styles.module.scss";
 import MenuBar from "../../../MenuBar/View";
 import TextField from '@mui/material/TextField';
 import Message from "./Message";
+import { Button } from "@mui/material";
 
 
 type Props = {
@@ -11,6 +12,7 @@ type Props = {
   messageChat: any;
   effective: number;
   capacity: number
+  groupName: string
 };
 
 const View: React.FC<Props> = ({
@@ -19,7 +21,8 @@ const View: React.FC<Props> = ({
   message,
   messageChat,
   effective,
-  capacity
+  capacity,
+  groupName
 }) => {
 
   return (
@@ -27,12 +30,11 @@ const View: React.FC<Props> = ({
       <MenuBar />
       <div className={styles.content}>
         <div className={styles.head}>
-          <div className={styles.name}>
-            Nom du groupe
+          <div>
+            <Button variant="text">Retour</Button>
           </div>
-
-          <div className={styles.leave}>
-            Quitter le groupe
+          <div className={styles.name}>
+            Groupe: {groupName}
           </div>
           <div className={styles.effectif}>
             {effective}/{capacity}
@@ -59,7 +61,8 @@ const View: React.FC<Props> = ({
             className={styles.input}
           />
           <div onClick={handlePostMessages}>
-            Envoyer
+            <Button variant="outlined">Envoyer</Button>
+
           </div>
         </div>
       </div>

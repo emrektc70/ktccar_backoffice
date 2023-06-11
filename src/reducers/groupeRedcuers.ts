@@ -6,7 +6,8 @@ type State = {
     id: number;
     groupeData: any;
     effective: number;
-    capacity: number
+    capacity: number;
+    groupName: string
 };
 
 const initialState: State = {
@@ -15,6 +16,7 @@ const initialState: State = {
     groupeData: null,
     effective: 0,
     capacity: 0,
+    groupName: ''
 };
 
 const groupesReducer = (

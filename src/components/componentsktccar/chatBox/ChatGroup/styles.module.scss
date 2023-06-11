@@ -2,19 +2,21 @@
     margin-left: 350px;
     margin-top: 40px;
     font-family: "Arial", sans-serif;
+    z-index: 20 !important;
 }
 
 .head {
     position: fixed;
-    width: 100%;
+    // width: 100%;
     top: 0px;
     left: 325px;
-    height: 50px;
+    height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 10;
-    background-color: #fff
+    z-index: 20 !important;
+    background-color: #fff;
+    margin-left: 16px;
 }
 
 .name {
@@ -34,22 +36,6 @@
     }
 }
 
-.leave {
-    position: absolute;
-    width: 140px;
-    padding: 8px 2px;
-    left: 330px;
-    background: #E31111;
-    border-radius: 10px;
-    text-align: center;
-    align-items: center;
-    color: #fff;
-    cursor: pointer;
-
-    &:hover {
-        opacity: 0.7;
-    }
-}
 
 .effectif {
     position: fixed;
@@ -75,7 +61,7 @@
 
 
 .contentInput {
-    width: 500px;
+    width: calc(70vw - 32px);
     max-width: 100%;
     display: flex;
     align-items: center;
@@ -95,8 +81,11 @@
     display: flex;
     flex-direction: column-reverse;
     overflow-y: scroll;
-    height: 100vw;
+    height: 80vh;
     max-height: 100%;
+    background-color: red;
+    width: calc(70vw - 32px);
+
 }
 
 ::-webkit-scrollbar {
