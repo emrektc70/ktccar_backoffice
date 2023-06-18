@@ -11,7 +11,7 @@
   font-family: "Arial", sans-serif;
 }
 
-.categorie-box {
+.categorieBox {
   color: #fff;
 }
 
@@ -49,10 +49,55 @@
   }
 }
 
+.average {
+  display: none;
+}
+
+
+
 
 .row {
   display: flex;
   align-items: center;
   justify-content: center;
   min-width: 80px
+}
+
+@media(max-width:1224px) {
+  .content {
+    width: 100px
+  }
+
+  .average {
+    display: initial
+  }
+
+  .logo {
+    left: -26px;
+    top: 0 !important;
+    color: #fff;
+  }
+
+  .fullWidth {
+    display: none !important;
+  }
+
+  .categorie {
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 68px;
+    justify-content: center;
+
+    &:hover {
+      opacity: 0.7;
+      background-color: none;
+    }
+
+    &:active {
+      opacity: 0.4;
+    }
+  }
+
 }

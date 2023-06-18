@@ -1,4 +1,4 @@
-import "./styles.scss";
+import styles from "./styles.module.scss";
 import logo from "./assets//bleublanc1.png";
 import { useNavigate } from "react-router-dom";
 import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined';
@@ -25,35 +25,56 @@ const View = () => {
   };
 
   return (
-    <div className="content">
-      <div className="logo" onClick={navigateHome}>
-        <img src={logo} alt="logo" />
+    <div className={styles.content}>
+      <div className={styles.fullWidth}>
+        <div className={styles.logo} onClick={navigateHome}>
+          <img src={logo} alt="logo" />
+        </div>
+        <div className={styles.categorieBox}>
+          <div className={styles.categorie} onClick={navigateHome}>
+            <div className={styles.row}>
+              Accueil
+            </div>
+            <HomeOutlinedIcon />
+          </div>
+          <div className={styles.categorie} onClick={navigateEvent}>
+            <div className={styles.row}>
+              Actualité
+            </div>
+            <DateRangeOutlinedIcon />
+          </div>
+          <div className={styles.categorie} onClick={navigateChat}>
+            <div className={styles.row}>
+              Chat
+            </div>
+            <ChatBubbleOutlineOutlinedIcon />
+          </div>
+          <div className={styles.categorie} onClick={navigateProfil}>
+            <div className={styles.row}>
+              Profil
+            </div>
+            <AccountBoxOutlinedIcon />
+          </div>
+        </div>
       </div>
 
-      <div className="categorie-box">
-        <div className="categorie" onClick={navigateHome}>
-          <div className="row">
-            Accueil
-          </div>
-          <HomeOutlinedIcon />
+      <div className={styles.average}>
+        <div className={styles.logo} onClick={navigateHome}>
+          <img src={logo} alt="logo" width={156} height={156} />
         </div>
-        <div className="categorie" onClick={navigateEvent}>
-          <div className="row">
-            Actualité
+        <div className={styles.categorieBox}>
+          <div className={styles.categorie} onClick={navigateHome}>
+            <HomeOutlinedIcon />
           </div>
-          <DateRangeOutlinedIcon />
-        </div>
-        <div className="categorie" onClick={navigateChat}>
-          <div className="row">
-            Chat
+          <div className={styles.categorie} onClick={navigateEvent}>
+            <DateRangeOutlinedIcon />
           </div>
-          <ChatBubbleOutlineOutlinedIcon />
-        </div>
-        <div className="categorie" onClick={navigateProfil}>
-          <div className="row">
-            Profil
+          <div className={styles.categorie} onClick={navigateChat}>
+            <ChatBubbleOutlineOutlinedIcon />
           </div>
-          <AccountBoxOutlinedIcon />
+          <div className={styles.categorie} onClick={navigateProfil}>
+            <AccountBoxOutlinedIcon />
+          </div>
         </div>
       </div>
     </div>
