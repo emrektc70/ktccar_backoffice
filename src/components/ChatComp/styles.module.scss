@@ -1,26 +1,25 @@
-.chatPage{
+.chatPage {
     position: absolute;
     top: 10px;
     left: 350px;
-        //font-family: "Raleway", sans-serif;
 }
 
-.search{
+.search {
     width: 800px;
     height: 40px;
     border-radius: 10px;
-   // background-color: #D9D9D9;
+    // background-color: #D9D9D9;
     cursor: pointer;
     border: none !important;
     padding-left: 40px;
 
 }
 
-.boxGroup{
+.boxGroup {
     margin-top: 56px
 }
 
-.title{
+.title {
     position: relative;
     padding: 0;
     margin: 0;
@@ -33,7 +32,13 @@
     transition: all 0.4s ease 0s;
 }
 
-.chatBar{
+.chatBar {
     font-family: "Arial", sans-serif;
 }
 
+@media(max-width:1224px) {
+    .chatPage {
+
+        left: 150px;
+    }
+}

@@ -52,3 +52,9 @@
     display: flex;
     justify-content: space-between;
 }
+
+@media(max-width:1224px) {
+    .profilPage {
+        left: 150px;
+    }
+}

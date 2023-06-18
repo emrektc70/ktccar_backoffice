@@ -15,3 +15,9 @@
   font-weight: 600;
   font-size: 24px
 }
+
+@media(max-width:1224px) {
+  .event {
+    left: 150px
+  }
+}
