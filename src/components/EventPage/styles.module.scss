@@ -1,7 +1,7 @@
 .contentpageEvent {
   width: 800px;
   margin-top: 40px;
-
+  max-width: calc(100vw - 32px);
 }
 
 .event {
@@ -20,4 +20,13 @@
   .event {
     left: 150px
   }
+}
+
+@media(max-width:600px) {
+  .event {
+    left: 0px;
+    padding: 16px;
+  }
+
+
 }

@@ -33,6 +33,7 @@ function Slideshow({ images }: SlideshowProps) {
         src={images[currentIndex]}
         alt="Slideshow"
         style={{ height: "300px ", width: "500px" }}
+        className='image'
       />
       <div onClick={handleNext} className="afterBtn">
         {`${'>'}`}
