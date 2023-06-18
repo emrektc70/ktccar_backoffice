@@ -1,26 +1,26 @@
 import MenuBar from "../MenuBar/View";
-import "./styles.scss";
+import styles from "./styles.module.scss";
 import bmw from "./assets/bmw.png";
 import BoxHome from "../componentsktccar/BoxHome/View";
 
 const homePage = () => {
   return (
-    <div className="home">
+    <div className={styles.home}>
       <MenuBar />
-      <div className="contentpage">
-        <div className="textContent">
-          <div className="textStyle">
-            <h2 className="TextTitle">KTC CAR</h2>
+      <div className={styles.contentpage}>
+        <div className={styles.textContent}>
+          <div className={styles.textStyle}>
+            <h2 className={styles.textTitle}>KTC CAR</h2>
             <h3>KTC CAR, site pour les passionnés d'automobiles.</h3>
           </div>
-          <div className="buttonRedirection">Cliquer ici</div>
+          <div className={styles.buttonRedirection}>Cliquer ici</div>
         </div>
-        <div className="imageDetails">
-          <img className="image" src={bmw} alt="image" />
+        <div className={styles.imageDetails}>
+          <img className={styles.image} src={bmw} alt="image" />
         </div>
       </div>
-      <div className="containerBox">
-      <BoxHome/>
+      <div className={styles.containerBox}>
+        <BoxHome />
       </div>
     </div>
   );
