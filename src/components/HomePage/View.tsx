@@ -1,4 +1,4 @@
-import MenuBar from "../MenuBar/View";
+import MenuBar from "../MenuBar";
 import styles from "./styles.module.scss";
 import bmw from "./assets/bmw.png";
 import BoxHome from "../componentsktccar/BoxHome/View";

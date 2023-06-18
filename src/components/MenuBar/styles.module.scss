@@ -54,7 +54,9 @@
 }
 
 
-
+.menuBurger {
+  display: none
+}
 
 .row {
   display: flex;
@@ -100,4 +102,56 @@
     }
   }
 
+}
+
+@media(max-width:600px) {
+  .average {
+    display: none !important;
+  }
+
+  .content {
+    display: none !important;
+  }
+
+  .menuMobile {
+    min-height: 100vh;
+    max-width: calc(100vw - 32px);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+  }
+
+  .categorie {
+    color: #fff;
+  }
+
+  .menuBurger {
+    display: initial;
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    max-width: 100vw;
+    z-index: 10;
+
+    &:active {
+      opacity: 0.4;
+    }
+  }
+
+  .categorieBox {
+    z-index: 8;
+  }
+
+  .background {
+    position: absolute;
+    min-width: 100vw;
+    min-height: 100vh;
+    width: 100vw;
+    height: 100vh;
+    background-color: #5f5f58;
+    top: -40px;
+    right: -125px;
+  }
 }

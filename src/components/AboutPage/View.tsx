@@ -1,5 +1,5 @@
+import MenuBar from "../MenuBar";
 import styles from "./styles.module.scss";
-import MenuBar from "../MenuBar/View";
 
 type Props = {};
 

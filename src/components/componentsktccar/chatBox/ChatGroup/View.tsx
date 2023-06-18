@@ -1,5 +1,5 @@
 import styles from "./styles.module.scss";
-import MenuBar from "../../../MenuBar/View";
+import MenuBar from "../../../MenuBar";
 import TextField from '@mui/material/TextField';
 import Message from "./Message";
 import { Button } from "@mui/material";

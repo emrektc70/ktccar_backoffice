@@ -1,4 +1,4 @@
-import MenuBar from "../MenuBar/View";
+import MenuBar from "../MenuBar";
 import SlidShow from "../SlideShow/View";
 import styles from "./styles.module.scss";
 import img1 from "./assets/bmw.png";

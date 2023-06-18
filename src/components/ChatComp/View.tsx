@@ -1,5 +1,5 @@
 import styles from "./styles.module.scss";
-import MenuBar from "../MenuBar/View";
+import MenuBar from "../MenuBar";
 import ChatBox from "../componentsktccar/chatBox";
 import { TextField } from "@material-ui/core";
 
