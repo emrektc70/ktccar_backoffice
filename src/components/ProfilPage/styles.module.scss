@@ -58,3 +58,21 @@
         left: 150px;
     }
 }
+
+@media(max-width:600px) {
+    .profilPage {
+        left: 16px;
+    }
+
+    .name {
+        max-width: calc(100vw - 16px);
+    }
+
+    .firstName {
+        max-width: calc(100vw - 16px);
+    }
+
+    .email {
+        max-width: calc(100vw - 16px);
+    }
+}

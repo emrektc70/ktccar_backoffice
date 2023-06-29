@@ -46,6 +46,12 @@
   width: 500px;
 }
 
+@media(max-width:1200px) {
+  .cointenerSlide {
+    left: 100px
+  }
+}
+
 @media(max-width:600px) {
   .cointenerSlide {
     width: 100vw;
