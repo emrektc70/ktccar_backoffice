@@ -19,14 +19,14 @@ const View: React.FC<Props> = ({ groupes, postGroupeId }) => {
             variant="standard"
             className={styles.search}
           />
+        </div>
 
-          <div className={styles.title}>
-            <h2> Groupe disponibles</h2>
-          </div>
+        <div className={styles.title}>
+          <h2> Groupe disponibles</h2>
+        </div>
 
-          <div className={styles.boxGroup}>
-            <ChatBox groupes={groupes} />
-          </div>
+        <div className={styles.boxGroup}>
+          <ChatBox groupes={groupes} />
         </div>
       </div>
     </div>

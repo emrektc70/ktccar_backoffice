@@ -5,7 +5,6 @@ import {
   postLogin,
 } from "../../actions/authentification";
 import { RootState } from "../../store/store";
-//import { RootState } from "app/store";
 import ViewModel from "./Model";
 import { changeSecurityFields } from "../../actions/security";
 

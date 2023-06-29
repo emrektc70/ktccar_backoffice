@@ -38,6 +38,7 @@ const ViewModel: React.FC<Props> = ({
   const handleClickEmail = useCallback(
     (e: React.BaseSyntheticEvent) => {
       const value = e.target.value;
+      console.log(value);
       changeRegisterFields("emailRegister", value);
     },
     [changeRegisterFields]
@@ -74,7 +75,7 @@ const ViewModel: React.FC<Props> = ({
   const handleValidateRegister = useCallback(() => {
     postRegister();
   }, [postRegister]);
-  
+
   return (
     <View
       firstName={firstName}

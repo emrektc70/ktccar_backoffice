@@ -1,4 +1,4 @@
-import Event from "../components/EventPage/View";
+import Event from "../components/EventPage";
 const eventPage = () => {
   return (
     <div>

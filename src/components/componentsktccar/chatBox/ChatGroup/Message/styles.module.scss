@@ -5,6 +5,7 @@
 
 .contentMessage {
     margin-left: 16px;
+    max-width: 100%;
 }
 
 .messageBox {
@@ -24,4 +25,10 @@
     display: flex;
     align-items: center;
     gap: 8px;
+}
+
+@media(max-width: 600px) {
+    .contentMessage {
+        max-width: 80%;
+    }
 }

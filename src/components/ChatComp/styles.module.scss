@@ -12,6 +12,7 @@
     cursor: pointer;
     border: none !important;
     padding-left: 40px;
+    max-width: calc(100vw - 48px);
 
 }
 
@@ -40,5 +41,11 @@
     .chatPage {
 
         left: 150px;
+    }
+}
+
+@media(max-width:600px) {
+    .chatPage {
+        left: 16px;
     }
 }

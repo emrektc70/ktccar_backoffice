@@ -18,7 +18,6 @@ const authenticationReducer = (
   state = initialState,
   action: AnyAction
 ): State => {
-
   switch (action.type) {
     case SET_AUTHENTIFICATION_FIELDS:
       return {

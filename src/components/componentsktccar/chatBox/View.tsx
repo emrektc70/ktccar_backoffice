@@ -14,7 +14,7 @@ const View: React.FC<Props> = ({ groupes, handleClickJoinGroupe }) => {
           <>
             <h3> Nom du groupe: {groupe.groupName}</h3>
             <p>
-              Nombre dans le groupe: {groupe.nbUser} / {groupe.capacity}
+              effectif : {groupe.nbUser} / {groupe.capacity}
             </p>
             <div className={styles.join}>
               <Button

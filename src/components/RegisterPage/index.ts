@@ -1,11 +1,10 @@
 import { connect } from "react-redux";
 import { Dispatch } from "redux";
-import { RootState } from "../../store/store";
 import ViewModel from "./Model";
 import { changeRegisterFields, postRegister } from "../../actions/register";
 
 // eslint-disable-next-line no-unused-vars
-const mapStateToProps = (state: RootState) => ({
+const mapStateToProps = (state: any) => ({
   firstName: state.register.firstName,
   passwordRegister: state.register.passwordRegister,
   emailRegister: state.register.emailRegister,

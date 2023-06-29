@@ -3,6 +3,7 @@
     margin-top: 40px;
     font-family: "Arial", sans-serif;
     z-index: 20 !important;
+    max-width: calc(100vw - 32px);
 }
 
 .head {
@@ -83,7 +84,6 @@
     overflow-y: scroll;
     height: 80vh;
     max-height: 100%;
-    background-color: red;
     width: calc(70vw - 32px);
 
 }
@@ -91,4 +91,47 @@
 ::-webkit-scrollbar {
     width: 0.5em;
     background-color: transparent;
+}
+
+@media(max-width: 1224px) {
+
+    .head,
+    .chat {
+        left: 150px;
+    }
+
+    .messageInput {
+        left: 150px;
+    }
+}
+
+@media(max-width: 600px) {
+
+    .chat {
+        left: 16px;
+        width: calc(100vw - 32px);
+    }
+
+    .head {
+        left: 16px;
+        max-width: calc(100vw - 32px);
+    }
+
+    .messageInput {
+        left: 16px;
+    }
+
+    .contentInput {
+        width: calc(100vw - 32px)
+    }
+
+    .name {
+        left: -8px;
+        top: 14px !important;
+    }
+
+    .effectif {
+        top: 24px;
+        left: 206px;
+    }
 }

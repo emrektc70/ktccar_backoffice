@@ -30,9 +30,9 @@ const View: React.FC<Props> = ({
       <MenuBar />
       <div className={styles.content}>
         <div className={styles.head}>
-          <div>
+          {/*  <div>
             <Button variant="text">Retour</Button>
-          </div>
+          </div> */}
           <div className={styles.name}>
             Groupe: {groupName}
           </div>
