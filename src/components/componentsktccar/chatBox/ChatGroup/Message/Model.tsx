@@ -10,9 +10,7 @@ const ViewModel: React.FC<Props> = ({ messageChat }) => {
     const userMessage = useMemo(() => {
       return messageChat.filter((user: { id: string }) => user.id === messageChat.user.id);
     }, [messageChat]);
-  
-  
-    console.log(userMessage) */
+   */
 
   return <View messageChat={messageChat} />;
 };

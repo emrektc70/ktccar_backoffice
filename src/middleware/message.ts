@@ -15,21 +15,22 @@ const messageMiddleware =
         const res = await httpPostMessages({ message, isPin, group_id });
         store.dispatch(changeMessageFields("message", ""));
         store.dispatch(changeMessageFields("isPin", res.isPin));
-        getMessages();
+        //getMessages();  modification ici
         break;
       }
 
       case GET_MESSAGE: {
-        const { group_id } = store.getState().message;
-        const res = await httpGetMessage(group_id);
-        console.log(res);
-        if (res.length > 0) {
-          store.dispatch(changeMessageFields("messageChat", res));
-        } else {
-          store.dispatch(changeMessageFields("messageChat", ""));
+        if (action.id) {
+          const res = await httpGetMessage(action.id);
+          if (res.length > 0) {
+            store.dispatch(changeMessageFields("messageChat", res));
+          } else {
+            store.dispatch(changeMessageFields("messageChat", ""));
+          }
         }
         break;
       }
+
       default:
         next(action);
     }

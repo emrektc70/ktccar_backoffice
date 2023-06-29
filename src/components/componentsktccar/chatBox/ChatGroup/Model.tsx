@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useMemo } from "react";
 import View from "./View";
+import { useNavigate, useParams } from "react-router-dom";
 
 type Props = {
   postMessages: VoidFunction;
@@ -8,7 +9,7 @@ type Props = {
   isPin: boolean;
   changeMessageFields: ReduxUniversalSetter;
   messageChat: any;
-  getMessages: VoidFunction;
+  getMessages: (id: string) => void;
   group_id: number;
   changeGroupeFields: ReduxUniversalSetter;
   groupes: any[];
@@ -33,11 +34,21 @@ const ViewModel: React.FC<Props> = ({
   groupName
 }) => {
 
-
+  const { id } = useParams()
 
   useEffect(() => {
-    getMessages()
-  }, [getMessages, group_id])
+    const idString = group_id.toString();
+    console.log(idString)
+
+    if (idString === "0") {
+      if (id) {
+        const idToString = id.toString();
+        getMessages(idToString);
+      }
+    }
+    getMessages(idString);
+  }, [getMessages, group_id, id]);
+
 
   const handleClickMessage = useCallback((e: React.BaseSyntheticEvent) => {
     const value = e.target.value
@@ -59,10 +70,12 @@ const ViewModel: React.FC<Props> = ({
     [group_id, groupes]);
 
   useEffect(() => {
-    changeGroupeFields('effective', groupeDetails[0].nbUser)
-    changeGroupeFields('capacity', groupeDetails[0].capacity)
-    changeGroupeFields('groupName', groupeDetails[0].groupName)
-  }, [changeGroupeFields, groupeDetails])
+    if (groupeDetails && groupeDetails.length > 0) {
+      changeGroupeFields('effective', groupeDetails[0]?.nbUser);
+      changeGroupeFields('capacity', groupeDetails[0]?.capacity);
+      changeGroupeFields('groupName', groupeDetails[0]?.groupName);
+    }
+  }, [changeGroupeFields, groupeDetails]);
 
   return (
     <View
