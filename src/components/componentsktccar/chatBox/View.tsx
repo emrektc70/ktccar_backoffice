@@ -7,6 +7,7 @@ type Props = {
 };
 
 const View: React.FC<Props> = ({ groupes, handleClickJoinGroupe }) => {
+  console.log(groupes[0].isPrivate);
   return (
     <div className={styles.box}>
       {groupes.map((groupe) => (
@@ -17,12 +18,22 @@ const View: React.FC<Props> = ({ groupes, handleClickJoinGroupe }) => {
               effectif : {groupe.nbUser} / {groupe.capacity}
             </p>
             <div className={styles.join}>
-              <Button
-                variant="contained"
-                className={styles.button}
-                onClick={handleClickJoinGroupe(groupe.id)}>
-                Rejoindre
-              </Button>
+              {
+                !groupe.isPrivate ?
+                  <Button
+                    variant="contained"
+                    className={styles.button}
+                    onClick={handleClickJoinGroupe(groupe.id)}>
+                    Rejoindre
+                  </Button>
+                  :
+                  <Button
+                    variant="contained"
+                    className={styles.err}
+                  >
+                    Groupe privé
+                  </Button>
+              }
             </div>
           </>
         </div>

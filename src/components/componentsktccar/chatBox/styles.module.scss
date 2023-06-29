@@ -9,6 +9,18 @@
     position: relative;
 }
 
+.button {
+    background-color: #0068ff !important;
+    color: #fff !important;
+    width: 136px;
+}
+
+.err {
+    background-color: #ff0033 !important;
+    color: #fff !important;
+    width: 136px;
+}
+
 .join {
     padding: 8px;
     border-radius: 10px;
@@ -16,7 +28,7 @@
     color: #fff;
     position: absolute;
     bottom: 10px;
-    right: 20px;
+    right: 40px;
     cursor: pointer;
 
     &:hover {

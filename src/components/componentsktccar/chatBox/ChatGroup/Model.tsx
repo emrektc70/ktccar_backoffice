@@ -33,6 +33,8 @@ const ViewModel: React.FC<Props> = ({
   groupName
 }) => {
 
+
+
   useEffect(() => {
     getMessages()
   }, [getMessages, group_id])

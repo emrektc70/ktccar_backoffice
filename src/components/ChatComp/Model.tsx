@@ -8,6 +8,8 @@ type Props = {
 };
 
 const ViewModel: React.FC<Props> = ({ getGroupes, groupes, postGroupeId }) => {
+
+  console.log(groupes);
   useEffect(() => {
     getGroupes();
   }, [getGroupes]);
