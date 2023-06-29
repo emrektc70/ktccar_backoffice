@@ -5,18 +5,27 @@ import { TextField } from "@material-ui/core";
 
 type Props = {
   groupes: any[];
-  postGroupeId: (id: number) => void;
+  handleSearchChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  filteredGroupes: any[];
+  searchValue: string
 };
-const View: React.FC<Props> = ({ groupes, postGroupeId }) => {
+
+const View: React.FC<Props> = ({
+  groupes,
+  handleSearchChange,
+  filteredGroupes,
+  searchValue
+}) => {
   return (
     <div className={styles.chatBar}>
       <MenuBar />
       <div className={styles.chatPage}>
         <div className={styles.searchBar}>
           <TextField
-            id="standard-basic"
             label="Recherche"
             variant="standard"
+            value={searchValue}
+            onChange={handleSearchChange}
             className={styles.search}
           />
         </div>
@@ -26,7 +35,7 @@ const View: React.FC<Props> = ({ groupes, postGroupeId }) => {
         </div>
 
         <div className={styles.boxGroup}>
-          <ChatBox groupes={groupes} />
+          <ChatBox groupes={filteredGroupes} />
         </div>
       </div>
     </div>
@@ -34,3 +43,4 @@ const View: React.FC<Props> = ({ groupes, postGroupeId }) => {
 };
 
 export default View;
+
