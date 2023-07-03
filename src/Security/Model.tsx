@@ -38,6 +38,7 @@ const ViewModel: React.FC<Props> = ({ children, isLog, token }) => {
       navigation(`/`)
     }
   }, [isLog, checkIsLog, navigation])
+
   return (
     <View isLog={isLog} isPublicRoute={isPublicRoute} checkIsLog={checkIsLog} >
       {children}
