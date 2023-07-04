@@ -3,6 +3,7 @@ import {
   POST_MESSAGES,
   changeMessageFields,
   getMessages,
+  postMessages,
 } from "../actions/message";
 import httpGetMessage from "../api/message/httpGetMessageId";
 import httpPostMessages from "../api/message/httpPostMessages";
@@ -15,7 +16,7 @@ const messageMiddleware =
         const res = await httpPostMessages({ message, isPin, group_id });
         store.dispatch(changeMessageFields("message", ""));
         store.dispatch(changeMessageFields("isPin", res.isPin));
-        //getMessages();  modification ici
+        store.dispatch(getMessages(group_id));
         break;
       }
 
@@ -30,7 +31,6 @@ const messageMiddleware =
         }
         break;
       }
-
       default:
         next(action);
     }

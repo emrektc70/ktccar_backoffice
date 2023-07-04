@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo } from "react";
 import View from "./View";
 import { useNavigate, useParams } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
 type Props = {
   postMessages: VoidFunction;
@@ -53,6 +54,7 @@ const ViewModel: React.FC<Props> = ({
     changeMessageFields('message', value)
   }, [changeMessageFields])
 
+
   const handlePostMessages = useCallback(() => {
     const url = new URL(window.location.href)
     const pathname = url.pathname;
@@ -75,6 +77,7 @@ const ViewModel: React.FC<Props> = ({
     }
   }, [changeGroupeFields, groupeDetails]);
 
+  console.log(capacity)
   return (
     <View
       handlePostMessages={handlePostMessages}
