@@ -7,14 +7,15 @@ import img3 from "./assets/pg.jpg"
 import img4 from "./assets/ratio.jpg"
 import img5 from "./assets/bg.jpg"
 import EventTable from "../EventTable/View";
+import TitleComp from "../TitleComp";
 
 const eventPage = () => {
   return (
     <div className={styles.event}>
       <MenuBar />
-      <div className={styles.title}>
-        Événement
-      </div>
+      {/*    <div >
+        <TitleComp title={"evenement"} />
+      </div> */}
       <div className={styles.contentpageEvent}>
         <SlidShow images={[img1, img2, img3, img4, img5]} />
       </div>

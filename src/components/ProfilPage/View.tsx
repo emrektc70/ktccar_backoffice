@@ -1,6 +1,7 @@
 import styles from "./styles.module.scss";
 import MenuBar from "../MenuBar";
 import { TextField, Button } from "@material-ui/core";
+import TitleComp from "../TitleComp";
 
 type Props = {
   handleClickSignOut: VoidFunction;
@@ -17,7 +18,7 @@ const View: React.FC<Props> = ({ handleClickSignOut, userName, lastName, firstNa
         <MenuBar />
       </div>
       <div className={styles.title}>
-        <h2>Mon profil </h2>
+        <div>Mon profil </div>
       </div>
       <div className={styles.form}>
         <div className={styles.name}>

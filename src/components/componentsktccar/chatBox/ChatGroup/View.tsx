@@ -11,8 +11,8 @@ type Props = {
   message: string;
   messageChat: any;
   effective: number;
-  capacity: number
-  groupName: string
+  capacity: number;
+  groupName: string;
 };
 
 const View: React.FC<Props> = ({
@@ -22,7 +22,7 @@ const View: React.FC<Props> = ({
   messageChat,
   effective,
   capacity,
-  groupName
+  groupName,
 }) => {
 
   return (
@@ -30,14 +30,11 @@ const View: React.FC<Props> = ({
       <MenuBar />
       <div className={styles.content}>
         <div className={styles.head}>
-          {/*  <div>
-            <Button variant="text">Retour</Button>
-          </div> */}
           <div className={styles.name}>
             Groupe: {groupName}
           </div>
           <div className={styles.effectif}>
-            {effective}/{capacity}
+            Effectif: {effective}/{capacity}
           </div>
         </div>
       </div>
@@ -46,6 +43,7 @@ const View: React.FC<Props> = ({
         <div className={styles.chat}>
           {
             messageChat.map((messageChat: any) =>
+
               <Message messageChat={messageChat} />
             )
           }

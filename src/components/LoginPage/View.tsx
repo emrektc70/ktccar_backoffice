@@ -30,27 +30,10 @@ const View: React.FC<Props> = ({
         <div className="title"> Se connecter </div>
         <Separator />
         <div className="inputBox">
-          {/*  <label className="labelName">Email: </label> */}
-          {/*   <input
-            type="email"
-            className="inputemail"
-            placeholder="Entre votre email"
-            value={email}
-            onChange={handleChangeEmail}
-          /> */}
           <TextField id="filled-basic" label="email" variant="filled" className="inputemail" value={email} onChange={handleChangeEmail}
             style={{ background: "#fff" }} fullWidth
 
           />
-
-          {/*           <label className="labelName">Mot de passe: </label>*/}
-          {/*   <input
-            type="password"
-            className="inputpassword"
-            placeholder="Entre votre mot de passe"
-            value={password}
-            onChange={handleChangePassword}
-          /> */}
           <div className="boxPassword">
             <TextField id="filled-basic" label="Mot de passe" variant="filled" className="inputpassword"
               value={password} onChange={handleChangePassword} style={{ background: "#fff" }} fullWidth type="password" />

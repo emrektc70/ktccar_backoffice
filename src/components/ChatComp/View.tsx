@@ -2,6 +2,7 @@ import styles from "./styles.module.scss";
 import MenuBar from "../MenuBar";
 import ChatBox from "../componentsktccar/chatBox";
 import { TextField } from "@material-ui/core";
+import TitleComp from "../TitleComp";
 
 type Props = {
   groupes: any[];
@@ -20,6 +21,7 @@ const View: React.FC<Props> = ({
     <div className={styles.chatBar}>
       <MenuBar />
       <div className={styles.chatPage}>
+        <TitleComp title={"Groupe disponibles"} />
         <div className={styles.searchBar}>
           <TextField
             label="Recherche"
@@ -30,9 +32,9 @@ const View: React.FC<Props> = ({
           />
         </div>
 
-        <div className={styles.title}>
+        {/*     <div className={styles.title}>
           <h2> Groupe disponibles</h2>
-        </div>
+        </div> */}
 
         <div className={styles.boxGroup}>
           <ChatBox groupes={filteredGroupes} />

@@ -1,16 +1,15 @@
 import View from "./View";
-import { useEffect, useMemo } from "react";
 
 type Props = {
   messageChat: any,
+  id: string
 };
 
-const ViewModel: React.FC<Props> = ({ messageChat }) => {
-  /* 
-    const userMessage = useMemo(() => {
-      return messageChat.filter((user: { id: string }) => user.id === messageChat.user.id);
-    }, [messageChat]);
-   */
+const ViewModel: React.FC<Props> = ({ messageChat, id }) => {
+
+  console.log(messageChat)
+
+
 
   return <View messageChat={messageChat} />;
 };

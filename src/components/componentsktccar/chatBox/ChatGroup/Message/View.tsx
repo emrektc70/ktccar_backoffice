@@ -3,7 +3,7 @@ import PersonIcon from '@mui/icons-material/Person';
 
 
 type Props = {
-  messageChat: any
+  messageChat: any;
 };
 
 const View: React.FC<Props> = ({ messageChat }) => {

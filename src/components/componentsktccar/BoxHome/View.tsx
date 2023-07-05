@@ -1,9 +1,14 @@
+import TitleComp from "../../TitleComp";
 import styles from "./styles.module.scss";
 
 const boxHome = () => {
   return (
     <div className={styles.homeBoxPage}>
-      <h2 className={styles.nameBox}> A quoi sert notre site ? </h2>
+
+      <div className={styles.nameBox}>
+        <TitleComp title={"A quoi sert notre site ?"} />
+      </div>
+
       <div className={styles.boxContainers}>
         <div className={styles.box1}>
           <h3 className={styles.titleBox}> Les évenements</h3>

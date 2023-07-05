@@ -1,7 +1,6 @@
 import { useCallback, useEffect, useMemo } from "react";
 import View from "./View";
-import { useNavigate, useParams } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useParams } from "react-router-dom";
 
 type Props = {
   postMessages: VoidFunction;
@@ -16,7 +15,8 @@ type Props = {
   groupes: any[];
   effective: number;
   capacity: number;
-  groupName: string
+  groupName: string;
+  id: string
 };
 
 const ViewModel: React.FC<Props> = ({
@@ -32,21 +32,22 @@ const ViewModel: React.FC<Props> = ({
   groupes,
   effective,
   capacity,
-  groupName
+  groupName,
+  id
 }) => {
 
-  const { id } = useParams()
+  const { idUrl } = useParams()
 
   useEffect(() => {
     const idString = group_id.toString();
     if (idString === "0") {
-      if (id) {
-        const idToString = id.toString();
+      if (idUrl) {
+        const idToString = idUrl.toString();
         getMessages(idToString);
       }
     }
     getMessages(idString);
-  }, [getMessages, group_id, id]);
+  }, [getMessages, group_id, idUrl]);
 
 
   const handleClickMessage = useCallback((e: React.BaseSyntheticEvent) => {
@@ -77,7 +78,6 @@ const ViewModel: React.FC<Props> = ({
     }
   }, [changeGroupeFields, groupeDetails]);
 
-  console.log(capacity)
   return (
     <View
       handlePostMessages={handlePostMessages}
