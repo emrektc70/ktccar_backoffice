@@ -4,21 +4,18 @@ import { useEffect } from "react";
 
 
 type Props = {
-  event: any[];
+  events: any[];
   getEvent: VoidFunction
 };
 
-const ViewModel: React.FC<Props> = ({ event, getEvent }) => {
-
-  console.log(event);
+const ViewModel: React.FC<Props> = ({ events, getEvent }) => {
 
   useEffect(() => {
     getEvent()
   }, [getEvent])
 
-
   return <View
-    event={event}
+    events={events}
   />;
 };
 

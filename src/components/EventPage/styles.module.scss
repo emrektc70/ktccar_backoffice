@@ -16,6 +16,12 @@
   font-size: 24px
 }
 
+.boxEvent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 @media(max-width:1224px) {
   .event {
     left: 150px

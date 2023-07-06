@@ -30,12 +30,12 @@ const View: React.FC<Props> = ({
         <div className="title"> Se connecter </div>
         <Separator />
         <div className="inputBox">
-          <TextField id="filled-basic" label="email" variant="filled" className="inputemail" value={email} onChange={handleChangeEmail}
+          <TextField label="email" variant="filled" className="inputemail" value={email} onChange={handleChangeEmail}
             style={{ background: "#fff" }} fullWidth
 
           />
           <div className="boxPassword">
-            <TextField id="filled-basic" label="Mot de passe" variant="filled" className="inputpassword"
+            <TextField label="Mot de passe" variant="filled" className="inputpassword"
               value={password} onChange={handleChangePassword} style={{ background: "#fff" }} fullWidth type="password" />
           </div>
 

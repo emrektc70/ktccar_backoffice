@@ -2,11 +2,11 @@ import { AnyAction } from "redux";
 import { SET_EVENT_FIELDS } from "../actions/event";
 
 type State = {
-  event: any[];
+  events: any[];
 };
 
 const initialState: State = {
-  event: [],
+  events: [],
 };
 
 const eventReducers = (state = initialState, action: AnyAction): State => {

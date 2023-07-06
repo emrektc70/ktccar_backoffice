@@ -6,12 +6,13 @@ import img2 from "./assets/room.jpg";
 import img3 from "./assets/pg.jpg"
 import img4 from "./assets/ratio.jpg"
 import img5 from "./assets/bg.jpg"
+import EventTable from "../EventTable";
 
 type Props = {
-  event: any[]
+  events: any[]
 };
 
-const View: React.FC<Props> = ({ event }) => {
+const View: React.FC<Props> = ({ events }) => {
   return (
     <div className={styles.event}>
       <MenuBar />
@@ -21,6 +22,15 @@ const View: React.FC<Props> = ({ event }) => {
       <div className={styles.contentpageEvent}>
         <SlidShow images={[img1, img2, img3, img4, img5]} />
       </div>
+      <div className={styles.boxEvent}>
+        {
+          events.map((event) =>
+            < EventTable event={event} />
+          )
+        }
+
+      </div>
+      salut
 
     </div>
   );

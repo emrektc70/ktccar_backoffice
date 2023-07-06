@@ -1,27 +1,32 @@
 import styles from "./styles.module.scss";
 
 type Props = {
-  event: any
+  event: any;
+  formattedDate: string;
+  startDateFormated: string
 };
 
-const View: React.FC<Props> = ({ event }) => {
+const View: React.FC<Props> = ({ event, formattedDate, startDateFormated }) => {
 
   return (
     <div className={styles.content}>
       <div className={styles.content}>
         <div className={styles.left}>
-          Image
+          image
         </div>
         <div className={styles.right}>
           <div className={styles.title}>
             {event.title}
+
           </div>
           <div className={styles.description}>
-            dezdddddddddddddddddddddddddddddddddddddd
+            {event.description}
           </div>
           <div className={styles.date}>
-            <div> date de debut </div>
-            <div> date de fin</div>
+            Du
+            <div> {startDateFormated} </div>
+            au
+            <div> {formattedDate}</div>
           </div>
         </div>
       </div>
