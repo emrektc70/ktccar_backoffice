@@ -5,6 +5,7 @@ import securityReducer from "./securityReducers";
 import registerReducer from "./registerReducers";
 import groupesReducer from "./groupeRedcuers";
 import userReducer from "./userReducer";
+import eventReducers from "./eventReducers";
 
 const rootReducer = combineReducers({
   message: messageReducer,
@@ -13,6 +14,7 @@ const rootReducer = combineReducers({
   register: registerReducer,
   groupe: groupesReducer,
   user: userReducer,
+  event: eventReducers,
 });
 
 export default rootReducer;

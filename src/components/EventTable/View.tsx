@@ -1,23 +1,29 @@
 import styles from "./styles.module.scss";
-import Bmw from "./assets/BMW.jpg";
-import TitleComp from "../TitleComp";
 
-type Props = {};
+type Props = {
+  event: any
+};
 
-const View: React.FC<Props> = () => {
+const View: React.FC<Props> = ({ event }) => {
+
   return (
     <div className={styles.content}>
-      <div>
-        <TitleComp title={"L'actualité"} />
-      </div>
-      <div className={styles.box}>
-        <div className={styles.titleBox}>La marque bmw de retour</div>
-        <div className={styles.description}>
-          Bayerische Motoren Werke AG ou plus communément appelé BMW Group, est
-          un groupe automobile allemand fondé en 1916 par Gustav Otto et Karl
-          Friedrich Rapp, et basé à Munich en Bavière.
+      <div className={styles.content}>
+        <div className={styles.left}>
+          Image
         </div>
-        <div className={styles.image}>test</div>
+        <div className={styles.right}>
+          <div className={styles.title}>
+            {event.title}
+          </div>
+          <div className={styles.description}>
+            dezdddddddddddddddddddddddddddddddddddddd
+          </div>
+          <div className={styles.date}>
+            <div> date de debut </div>
+            <div> date de fin</div>
+          </div>
+        </div>
       </div>
     </div>
   );

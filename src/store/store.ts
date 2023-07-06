@@ -6,6 +6,7 @@ import registerMiddleware from "../middleware/register";
 import groupesMiddleware from "../middleware/groupe";
 import messageMiddleware from "../middleware/message";
 import userMiddleware from "../middleware/user";
+import eventMiddleware from "../middleware/event";
 
 const store = configureStore({
   reducer: rootReducer,
@@ -16,6 +17,7 @@ const store = configureStore({
     groupesMiddleware,
     messageMiddleware,
     userMiddleware,
+    eventMiddleware,
     ...getDefaultMiddleware({
       serializableCheck: false,
     }),
