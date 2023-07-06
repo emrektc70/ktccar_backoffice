@@ -5,8 +5,6 @@ import { useParams } from "react-router-dom";
 type Props = {
   postMessages: VoidFunction;
   message: string;
-  groupId: string;
-  isPin: boolean;
   changeMessageFields: ReduxUniversalSetter;
   messageChat: any;
   getMessages: (id: string) => void;
@@ -16,14 +14,11 @@ type Props = {
   effective: number;
   capacity: number;
   groupName: string;
-  id: string
 };
 
 const ViewModel: React.FC<Props> = ({
   postMessages,
   message,
-  groupId,
-  isPin,
   changeMessageFields,
   messageChat,
   getMessages,
@@ -33,7 +28,7 @@ const ViewModel: React.FC<Props> = ({
   effective,
   capacity,
   groupName,
-  id
+
 }) => {
 
   const { idUrl } = useParams()

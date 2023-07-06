@@ -43,7 +43,6 @@ const View: React.FC<Props> = ({
         <div className={styles.chat}>
           {
             messageChat.map((messageChat: any) =>
-
               <Message messageChat={messageChat} />
             )
           }

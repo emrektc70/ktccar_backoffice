@@ -4,9 +4,7 @@ import { Dispatch } from "redux";
 import ViewModel from "./Model";
 
 // eslint-disable-next-line no-unused-vars
-const mapStateToProps = (state: any) => ({
-  id: state.user.id,
-});
+const mapStateToProps = (state: any) => ({});
 
 // eslint-disable-next-line no-unused-vars
 const mapDispatchToProps = (dispatch: Dispatch) => ({});

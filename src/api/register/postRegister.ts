@@ -5,7 +5,7 @@ const postRegsiter = async (data: any): Promise<any> => {
     const response = await axios.post("http://localhost:3110/user", data);
     return response.data;
   } catch (error) {
-    (console.log(error))
+    console.log(error);
   }
 };
 

@@ -1,17 +1,44 @@
+import { useEffect, useMemo, useState } from "react";
 import View from "./View";
+import { jwt_decode } from "jwt-decode-es";
 
 type Props = {
   messageChat: any,
-  id: string
 };
 
-const ViewModel: React.FC<Props> = ({ messageChat, id }) => {
+const ViewModel: React.FC<Props> = ({
+  messageChat,
+}) => {
 
-  console.log(messageChat)
+  const [tokenId, setTokenId] = useState(0)
 
+  const token = sessionStorage.getItem('token')
 
+  const tokenDecode = useMemo(() => {
+    if (token) {
+      return jwt_decode<TokenUser>(token);
+    }
+    return null;
+  }, [token]);
 
-  return <View messageChat={messageChat} />;
+  useEffect(() => {
+    if (tokenDecode) {
+      setTokenId(tokenDecode.id)
+    }
+  }, [tokenDecode])
+
+  const checkMessage = useMemo(() => {
+    if (messageChat && messageChat.user && messageChat.user.id === tokenId) {
+      return true;
+    } else {
+      return false;
+    }
+  }, [messageChat, tokenId]);
+
+  return <View
+    messageChat={messageChat}
+    checkMessage={checkMessage}
+  />;
 };
 
 export default ViewModel;
