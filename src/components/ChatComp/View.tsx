@@ -3,6 +3,8 @@ import MenuBar from "../MenuBar";
 import ChatBox from "../componentsktccar/chatBox";
 import { TextField } from "@material-ui/core";
 import TitleComp from "../TitleComp";
+import notGroupe from './assets/2810772.jpg'
+
 
 type Props = {
   groupes: any[];
@@ -32,13 +34,20 @@ const View: React.FC<Props> = ({
           />
         </div>
 
-        {/*     <div className={styles.title}>
-          <h2> Groupe disponibles</h2>
-        </div> */}
+        {
+          filteredGroupes.length !== 0 ?
+            <div className={styles.boxGroup}>
+              <ChatBox groupes={filteredGroupes} />
+            </div>
+            :
+            <div className={styles.img}>
+              <img src={notGroupe} width={400} height={300} />
+              <div className={styles.textStyle}>
+                Pas de groupe a ce nom
+              </div>
+            </div>
+        }
 
-        <div className={styles.boxGroup}>
-          <ChatBox groupes={filteredGroupes} />
-        </div>
       </div>
     </div>
   );
