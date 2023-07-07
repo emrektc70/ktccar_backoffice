@@ -3,6 +3,7 @@ import MenuBar from "../../../MenuBar";
 import TextField from '@mui/material/TextField';
 import Message from "./Message";
 import { Button } from "@mui/material";
+import notmessage from './assets/notsms.jpg'
 
 
 type Props = {
@@ -39,14 +40,20 @@ const View: React.FC<Props> = ({
         </div>
       </div>
       {
-        messageChat &&
-        <div className={styles.chat}>
-          {
-            messageChat.map((messageChat: any) =>
-              <Message messageChat={messageChat} />
-            )
-          }
-        </div>
+        messageChat ?
+          <div className={styles.chat}>
+            {
+              messageChat.map((messageChat: any) =>
+                <Message messageChat={messageChat} />
+              )
+            }
+          </div> :
+          <div className={styles.notmessage}>
+            <img src={notmessage} width={600} height={300} />
+            <div className={styles.styleMessage}>
+              Il n'y a pas de message dans le groupe.
+            </div>
+          </div>
       }
       <div className={styles.messageInput}>
         <div className={styles.contentInput}>

@@ -1,7 +1,6 @@
 import { EventOutputDto } from "../../types/EventOutputDto";
 import "./styles.module.scss";
 import View from "./View";
-import { useEffect } from "react";
 
 type Props = {
   event: EventOutputDto

@@ -4,22 +4,27 @@
     max-width: 700px;
     height: 200px;
     gap: 16px;
+    background-color: #6f6f6f;
+    border-radius: 20px;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.7;
+    }
 }
 
 .left {
-    width: 20%;
-    background-color: blueviolet;
+    width: 35%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .right {
-    width: 80%;
-    background-color: blue;
+    width: 65%;
     display: flex;
     justify-content: flex-start;
-    padding: 16px;
+    padding: 34px;
     flex-direction: column;
     gap: 16px;
     color: #fff;
