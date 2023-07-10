@@ -47,6 +47,15 @@
     gap: 8px;
 }
 
+.person {
+    color: #fff !important
+}
+
+.userName,
+.message {
+    color: #fff
+}
+
 @media(max-width: 600px) {
     .contentMessage {
         max-width: 80%;

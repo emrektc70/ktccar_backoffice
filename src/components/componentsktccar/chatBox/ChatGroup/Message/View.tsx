@@ -12,12 +12,12 @@ const View: React.FC<Props> = ({ messageChat, checkMessage }) => {
     <div className={[!checkMessage ? styles.contentMessage : styles.contentMessageUser].join(' ')}>
       <div className={[!checkMessage ? styles.messageBox : styles.messageBoxUser].join(' ')}>
         <div className={styles.user}>
-          <PersonIcon />
-          <div>
+          <PersonIcon className={[checkMessage ? styles.person : styles.personCheck].join(' ')} />
+          <div className={[checkMessage ? styles.userName : styles.userNameCheck].join(' ')}>
             {messageChat.user.username}
           </div>
         </div>
-        <div className={styles.message}>
+        <div className={[checkMessage ? styles.message : styles.messageCheck].join(' ')}>
           {messageChat.message}
         </div>
       </div>
