@@ -105,6 +105,19 @@
 }
 
 @media(max-width:600px) {
+  .contentMenuPhone {
+    position: fixed !important;
+    top: 0px;
+    right: 0px;
+    width: 100vw;
+    height: 72px;
+    position: relative;
+    background-color: #5f5f58;
+    z-index: 40;
+
+    // display: none
+  }
+
   .average {
     display: none !important;
   }
@@ -133,7 +146,7 @@
     right: 16px;
     top: 16px;
     max-width: 100vw;
-    z-index: 50;
+    z-index: 60;
 
     &:active {
       opacity: 0.4;

@@ -10,7 +10,6 @@ const ViewModel: React.FC<Props> = ({
 }) => {
 
   const token = sessionStorage.getItem('token')
-
   const tokenCheck = useMemo(() => {
     if (token) {
       return "Commencer a discuter"

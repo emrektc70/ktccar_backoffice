@@ -30,8 +30,10 @@ const View: React.FC<Props> = ({
 
   return (
     <div className={styles.menuContent}>
-      <div className={styles.menuBurger} onClick={handleOpenMenu}>
-        <img src={menu} alt="Menu" width={30} height={30} />
+      <div className={styles.contentMenuPhone} >
+        <div className={styles.menuBurger} onClick={handleOpenMenu}>
+          <img src={menu} alt="Menu" width={40} height={40} />
+        </div>
       </div>
       {
         isOpen &&

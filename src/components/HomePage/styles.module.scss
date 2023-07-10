@@ -1,6 +1,7 @@
 .home {
-  margin-left: 350px;
-  margin-top: 40px;
+  position: absolute;
+  top: 10px;
+  left: 350px;
   font-family: "Arial", sans-serif;
 }
 
@@ -71,6 +72,7 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+
   }
 
   .contentpage {
@@ -97,5 +99,12 @@
     align-items: center;
     justify-content: center;
     //margin-left: 180px;
+  }
+}
+
+@media(max-width:1224px) {
+  .home {
+    left: 0;
+    margin-top: 64px;
   }
 }

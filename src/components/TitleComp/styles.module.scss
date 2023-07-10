@@ -30,3 +30,13 @@
       background-color: #6f6f6f;
       max-width: 950px;
   }
+
+  @media(max-width:600) {
+      .separator {
+          display: none;
+      }
+
+      .title {
+          text-align: center;
+      }
+  }

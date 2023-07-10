@@ -37,6 +37,9 @@ const View: React.FC<Props> = ({
           <div className={styles.effectif}>
             Effectif: {effective}/{capacity}
           </div>
+          <div>
+            {/*             popup ici
+ */}          </div>
         </div>
       </div>
       {

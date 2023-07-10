@@ -28,6 +28,7 @@ const ViewModel: React.FC<Props> = () => {
 
   const handleOpenMenu = useCallback(() => {
     setIsOpen(!isOpen)
+    console.log('saluit')
   }, [isOpen])
 
   return (
