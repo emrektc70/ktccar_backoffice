@@ -3,6 +3,7 @@ import styles from "./styles.module.scss";
 import bmw from "./assets/bmw.png";
 import BoxHome from "../componentsktccar/BoxHome/View";
 import { Link } from "react-router-dom";
+import Presentation from "./Presentation";
 
 type Props = {
   tokenCheck: string;
@@ -37,6 +38,9 @@ const View: React.FC<Props> = ({ tokenCheck, token }) => {
         </div>
       </div>
       <div className={styles.containerBox}>
+        <Presentation />
+      </div>
+      <div className={[styles.containerBox, styles.box3].join(' ')}>
         <BoxHome />
       </div>
     </div>

@@ -2,13 +2,13 @@
 
 .boxContainers {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   height: 300px;
   flex-wrap: wrap;
   gap: 16px;
   width: 950px;
-  max-width: calc(100vw - 16px);
+  max-width: calc(100vw - 80px);
 }
 
 .box1,

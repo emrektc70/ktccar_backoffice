@@ -1,0 +1,107 @@
+  @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+  .presentation {
+      width: 950px;
+      max-width: calc(100vw - 16px);
+  }
+
+  .content {
+      width: 100%;
+      max-width: calc(100vw - 16px);
+  }
+
+  .box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: calc(100vw - 16px);
+      gap: 8px;
+      margin: 32px 0;
+      height: 300px;
+  }
+
+  .left {
+      width: 48%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .separator {
+      display: flex;
+      height: 300px;
+      width: 2px;
+      background-color: #6f6f6f;
+  }
+
+  .right {
+      width: 48%;
+      max-width: 500px;
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      justify-content: flex-start;
+      height: 80%;
+      gap: 24px;
+  }
+
+  .title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #6f6f6f;
+      font-family: 'Open Sans', serif !important;
+  }
+
+  .decription {
+      color: #6f6f6f;
+      font-size: 14px
+  }
+
+  .buttonRedirection {
+      background-color: #0166b1;
+      color: #fff;
+      width: 180px;
+      max-width: 100%;
+      border-radius: 10px;
+      text-align: center;
+      padding: 8px;
+
+      &:hover {
+          opacity: 0.7;
+      }
+  }
+
+  @media(max-width:1100px) {
+      .box {
+          flex-direction: column;
+      }
+
+      .title,
+      .decription {
+          text-align: center;
+      }
+
+      .separator {
+          display: none;
+      }
+  }
+
+  @media(max-width:600px) {
+      .content {
+          /*     display: flex;
+          align-items: center;
+          justify-content: center;
+          //  max-width: calc(100vw - 16px) */
+      }
+
+      .left,
+      .right {
+          width: 90%;
+          max-width: calc(100vw - 32px);
+      }
+
+      .left {
+          max-width: 300px;
+      }
+  }

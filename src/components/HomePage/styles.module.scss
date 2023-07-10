@@ -44,7 +44,7 @@
 }
 
 .containerBox {
-  margin-top: 50px;
+  margin: 124px 0;
   border-radius: 10px;
   width: 950px;
   height: 300px;
@@ -54,6 +54,12 @@
 @media(max-width: 1224px) {
   .home {
     margin-left: 150px;
+  }
+}
+
+@media(max-width:1100px) {
+  .box3 {
+    margin-top: 324px;
   }
 }
 
