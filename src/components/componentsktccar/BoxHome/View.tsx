@@ -4,7 +4,6 @@ import styles from "./styles.module.scss";
 const boxHome = () => {
   return (
     <div className={styles.homeBoxPage}>
-
       <div className={styles.nameBox}>
         <TitleComp title={"A quoi sert notre site ?"} />
       </div>

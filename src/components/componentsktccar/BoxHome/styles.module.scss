@@ -1,4 +1,6 @@
-.homeBoxPage {}
+.homeBoxPage {
+  padding: 32px 0;
+}
 
 .boxContainers {
   display: flex;
@@ -48,5 +50,13 @@
 
   .nameBox {
     text-align: center
+  }
+
+  .homeBoxPage {
+    display: flex;
+    align-items: center;
+    width: calc(100vw - 24px);
+    justify-content: center;
+    flex-direction: column;
   }
 }

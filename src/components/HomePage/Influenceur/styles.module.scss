@@ -1,0 +1,33 @@
+.influence {}
+
+.content {
+    max-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.description {
+    text-align: center;
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.etape {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+    color: #0166b1;
+}
+
+@media(max-width:600px) {
+    .influence {
+        display: flex;
+        align-items: center;
+        width: calc(100vw - 24px);
+        justify-content: center;
+        flex-direction: column;
+    }
+}

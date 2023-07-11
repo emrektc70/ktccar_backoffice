@@ -111,4 +111,12 @@
       .left {
           max-width: 300px;
       }
+
+      .image {
+          margin-left: -16px;
+      }
+
+      .buttonRedirection {
+          width: calc(100vw - 80px);
+      }
   }
