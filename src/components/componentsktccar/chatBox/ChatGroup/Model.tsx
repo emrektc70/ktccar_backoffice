@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import View from "./View";
 import { useParams } from "react-router-dom";
 
@@ -14,6 +14,8 @@ type Props = {
   effective: number;
   capacity: number;
   groupName: string;
+  createDate: string | number;
+  nameCreatePersonne: string
 };
 
 const ViewModel: React.FC<Props> = ({
@@ -28,10 +30,13 @@ const ViewModel: React.FC<Props> = ({
   effective,
   capacity,
   groupName,
+  createDate,
+  nameCreatePersonne
 
 }) => {
 
   const { idUrl } = useParams()
+  const [isOpen, setOpen] = useState<boolean>(false)
 
   useEffect(() => {
     const idString = group_id.toString();
@@ -65,13 +70,33 @@ const ViewModel: React.FC<Props> = ({
     groupes.filter((details) => details.id === group_id),
     [group_id, groupes]);
 
+  const dateGroupe = useMemo(() => {
+    const date = groupeDetails[0].createdAt;
+    const formatedDate = new Date(date);
+    const day = formatedDate.getDate().toString().padStart(2, '0');
+    const month = (formatedDate.getMonth() + 1).toString().padStart(2, '0');
+    const year = formatedDate.getFullYear();
+    return `${day}/${month}/${year}`;
+  }, [groupeDetails]);
+
+
+  console.log(dateGroupe)
+
   useEffect(() => {
     if (groupeDetails && groupeDetails.length > 0) {
       changeGroupeFields('effective', groupeDetails[0]?.nbUser);
       changeGroupeFields('capacity', groupeDetails[0]?.capacity);
       changeGroupeFields('groupName', groupeDetails[0]?.groupName);
+      changeGroupeFields('createDate', dateGroupe)
+      changeGroupeFields('nameCreatePersonne', groupeDetails[0]?.owner.username);
     }
-  }, [changeGroupeFields, groupeDetails]);
+  }, [changeGroupeFields, dateGroupe, groupeDetails]);
+
+  console.log(groupeDetails)
+  const handleClickPopup = useCallback(() => {
+    setOpen(!isOpen);
+  }, [isOpen])
+
 
   return (
     <View
@@ -82,6 +107,10 @@ const ViewModel: React.FC<Props> = ({
       capacity={capacity}
       effective={effective}
       groupName={groupName}
+      isOpen={isOpen}
+      handleClickPopup={handleClickPopup}
+      createDate={createDate}
+      nameCreatePersonne={nameCreatePersonne}
     />
   )
 

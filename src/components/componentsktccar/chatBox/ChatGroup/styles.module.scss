@@ -123,6 +123,14 @@
     background-color: transparent;
 }
 
+.iconInfo {
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
 @media(max-width: 1224px) {
 
     .head,
@@ -132,6 +140,20 @@
 
     .messageInput {
         left: 150px;
+    }
+
+    .notmessage {
+        left: 250px;
+    }
+}
+
+@media(max-width: 900px) {
+    .notmessage {
+        left: 180px;
+    }
+
+    .imageNotMessage {
+        width: 400px !important;
     }
 }
 
@@ -163,5 +185,13 @@
     .effectif {
         top: 24px;
         left: 206px;
+    }
+
+    .notmessage {
+        left: 16px;
+    }
+
+    .imageNotMessage {
+        display: none;
     }
 }

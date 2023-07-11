@@ -35,9 +35,16 @@ const ViewModel: React.FC<Props> = ({
     }
   }, [messageChat, tokenId]);
 
+  const dateString = messageChat.createdAt
+  const dateObj = new Date(dateString);
+  const heure = dateObj.getHours();
+  const minute = dateObj.getMinutes();
+
   return <View
     messageChat={messageChat}
     checkMessage={checkMessage}
+    heure={heure}
+    minute={minute}
   />;
 };
 

@@ -5,9 +5,16 @@ import PersonIcon from '@mui/icons-material/Person';
 type Props = {
   messageChat: any;
   checkMessage: boolean
+  heure: number;
+  minute: number
 };
 
-const View: React.FC<Props> = ({ messageChat, checkMessage }) => {
+const View: React.FC<Props> = ({
+  messageChat,
+  checkMessage,
+  heure,
+  minute
+}) => {
   return (
     <div className={[!checkMessage ? styles.contentMessage : styles.contentMessageUser].join(' ')}>
       <div className={[!checkMessage ? styles.messageBox : styles.messageBoxUser].join(' ')}>
@@ -19,6 +26,9 @@ const View: React.FC<Props> = ({ messageChat, checkMessage }) => {
         </div>
         <div className={[checkMessage ? styles.message : styles.messageCheck].join(' ')}>
           {messageChat.message}
+        </div>
+        <div className={styles.hoursBox}>
+          Envoyé a {heure} : {minute}
         </div>
       </div>
     </div >

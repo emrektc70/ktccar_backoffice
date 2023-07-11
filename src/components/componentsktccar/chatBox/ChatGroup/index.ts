@@ -17,6 +17,8 @@ const mapStateToProps = (state: any) => ({
   capacity: state.groupe.capacity,
   groupes: state.groupe.groupes,
   groupName: state.groupe.groupName,
+  createDate: state.groupe.createDate,
+  nameCreatePersonne: state.groupe.nameCreatePersonne,
 });
 
 // eslint-disable-next-line no-unused-vars
