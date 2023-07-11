@@ -54,9 +54,12 @@
 }
 
 
-.menuBurger {
+.menuBurger,
+.burgerLogo {
   display: none
 }
+
+
 
 .row {
   display: flex;
@@ -151,15 +154,30 @@
     &:active {
       opacity: 0.4;
     }
+
+  }
+
+  .burgerLogo {
+    display: initial;
+    position: absolute;
+    left: -8px;
+    top: -24px;
+    max-width: 100vw;
+    z-index: 60;
+
+    &:active {
+      opacity: 0.4;
+    }
   }
 
   .categorieBox {
     z-index: 8;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 110px;
-    top: 110px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
 
   body,

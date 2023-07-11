@@ -8,6 +8,7 @@ import img4 from "./assets/ratio.jpg"
 import img5 from "./assets/bg.jpg"
 import EventTable from "../EventTable";
 import TitleComp from "../TitleComp";
+import notEvent from './assets/notEvent.jpg'
 
 type Props = {
   events: any[]
@@ -21,14 +22,22 @@ const View: React.FC<Props> = ({ events }) => {
       <div className={styles.contentpageEvent}>
         <SlidShow images={[img1, img2, img3, img4, img5]} />
       </div>
-
-      <div className={styles.boxEvent}>
-        {
-          events.map((event) =>
-            < EventTable event={event} />
-          )
-        }
-      </div>
+      {
+        events.length !== 0 ?
+          <div className={styles.boxEvent}>
+            {
+              events.map((event) =>
+                < EventTable event={event} />
+              )
+            }
+          </div> :
+          <div>
+            <div>
+              <img src={notEvent} width={330} height={280} />
+            </div>
+            Il n'y a pas d'eventement disponible
+          </div>
+      }
     </div>
   );
 };

@@ -31,9 +31,9 @@
       max-width: 950px;
   }
 
-  @media(max-width:600) {
+  @media(max-width:600px) {
       .separator {
-          display: none;
+          display: none !important;
       }
 
       .title {

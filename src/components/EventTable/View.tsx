@@ -15,8 +15,9 @@ const View: React.FC<Props> = ({ event, formattedDate, startDateFormated }) => {
       <div className={styles.content}>
         <div className={styles.left}>
           {event.image ?
+            // eslint-disable-next-line jsx-a11y/alt-text
             <img src={event.image} width={200} height={200} /> :
-
+            // eslint-disable-next-line jsx-a11y/alt-text
             <img src={annonce} width={150} />
 
           }

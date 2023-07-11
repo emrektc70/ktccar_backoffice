@@ -11,7 +11,6 @@ const ViewModel: React.FC<Props> = ({ event }) => {
 
   const dateString = event.finishDate;
   const date = new Date(dateString);
-
   const day = date.getDate().toString().padStart(2, "0");
   const month = (date.getMonth() + 1).toString().padStart(2, "0");
   const year = date.getFullYear().toString();
@@ -22,7 +21,7 @@ const ViewModel: React.FC<Props> = ({ event }) => {
   const dateStart = new Date(startDate);
   const dayStart = dateStart.getDate().toString().padStart(2, "0");
   const monthStart = (dateStart.getMonth() + 1).toString().padStart(2, "0");
-  const yearStart = date.getFullYear().toString();
+  const yearStart = dateStart.getFullYear().toString();
   const startDateFormated = `${dayStart}/${monthStart}/${yearStart}`;
 
   return <View
