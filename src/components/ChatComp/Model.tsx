@@ -42,6 +42,8 @@ const ViewModel: React.FC<Props> = ({ getGroupes, groupes, postGroupeId }) => {
     setSearchValue(event.target.value);
   }, []);
 
+  console.log(filteredGroupes)
+
   return (
     <View
       groupes={groupes}

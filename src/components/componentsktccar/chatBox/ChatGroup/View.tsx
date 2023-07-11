@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import styles from "./styles.module.scss";
 import MenuBar from "../../../MenuBar";
 import TextField from '@mui/material/TextField';

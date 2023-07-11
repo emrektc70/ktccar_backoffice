@@ -21,7 +21,7 @@ const View: React.FC<Props> = ({ groupes, handleClickJoinGroupe }) => {
               effectif : {groupe.nbUser} / {groupe.capacity}
             </p>
             <div className={styles.join}>
-              {/*    {
+              {
                 !groupe.isPrivate ?
                   <Button
                     variant="contained"
@@ -36,13 +36,14 @@ const View: React.FC<Props> = ({ groupes, handleClickJoinGroupe }) => {
                   >
                     Groupe privé
                   </Button>
-              } */}
-              <Button
+              }
+              {/*               faire attention ici tout probleme previens de la 
+ */}              {/*    <Button
                 variant="contained"
                 className={styles.button}
                 onClick={handleClickJoinGroupe(groupe.id)}>
                 Rejoindre
-              </Button>
+              </Button> */}
             </div>
           </>
         </div>

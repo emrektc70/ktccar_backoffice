@@ -80,7 +80,6 @@ const ViewModel: React.FC<Props> = ({
   }, [groupeDetails]);
 
 
-  console.log(dateGroupe)
 
   useEffect(() => {
     if (groupeDetails && groupeDetails.length > 0) {
@@ -92,7 +91,6 @@ const ViewModel: React.FC<Props> = ({
     }
   }, [changeGroupeFields, dateGroupe, groupeDetails]);
 
-  console.log(groupeDetails)
   const handleClickPopup = useCallback(() => {
     setOpen(!isOpen);
   }, [isOpen])
