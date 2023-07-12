@@ -1,5 +1,8 @@
-import "./styles.scss";
+import styles from "./styles.module.scss";
 import Separator from "../Separator/view";
+import test from "./assets/porsche3.jpg"
+import TextField from "@mui/material/TextField";
+
 
 type Props = {
   firstName: string;
@@ -35,74 +38,97 @@ const View: React.FC<Props> = ({
   handleValidateRegister,
 }) => {
   return (
-    <div className="content-register">
-      <div className="box-register">
-        <div className="title"> S'inscrire </div>
-        <Separator />
-        <div className="inputBox">
-          <label className="labelName">Nom: </label>
-          <input
-            type="text"
-            className="inputemail"
-            placeholder="Entre votre nom"
-            value={lastName}
-            onChange={handleClickLastname}
-          />
-          <label className="labelName">Prénom: </label>
-          <input
-            type="text"
-            className="inputemail"
-            placeholder="Entre votre prénom"
-            value={firstName}
-            onChange={handleClickFirstName}
-          />
-          <label className="labelName">Nom d'utulisateur: </label>
-          <input
-            type="test"
-            className="inputemail"
-            placeholder="Entre votre nom d'utulisateur"
-            value={username}
-            onChange={handleClickUsername}
-          />
-          <label className="labelName">Numéro de téléphone: </label>
-          <input
-            type="tel"
-            className="inputemail"
-            placeholder="06 41 78 58 08"
-            value={phoneNumber}
-            onChange={handleClickPhoneNumber}
-          />
-          <label className="labelName">Email: </label>
-          <input
-            type="email"
-            className="inputemail"
-            placeholder="Entre votre email"
-            value={emailRegister}
-            onChange={handleClickEmail}
-          />
-
-          <label className="labelName">Mot-de-passe: </label>
-          <input
-            type="password"
-            className="inputpassword"
-            placeholder="Entre votre mot de passe"
-            value={passwordRegister}
-            onChange={handleClickPassword}
-          />
-          <div className="test">
+    <div className={styles.contentRegister}>
+      <div className={styles.box}>
+        <div className={styles.left}>
+          <div className={styles.boxRegister}>
+            <div className={styles.title}> S'inscrire </div>
             <Separator />
-          </div>
-          <div className="bottomBox">
-            <div className="register" onClick={navigateLogin}>
-              Créer mon compte
-            </div>
-            <div className="connexion" onClick={handleValidateRegister}>
-              Connexion
+            <div className={styles.inputBox}>
+              <TextField
+                type="text"
+                className={styles.inputemail}
+                placeholder="Entre votre nom"
+                value={lastName}
+                onChange={handleClickLastname}
+                label="Nom"
+                variant="filled"
+                fullWidth
+                style={{ background: "#fff" }}
+              />
+              <TextField
+                fullWidth
+                type="text"
+                className={styles.inputemail}
+                placeholder="Entre votre prénom"
+                value={firstName}
+                onChange={handleClickFirstName}
+                label="Prénom"
+                variant="filled"
+                style={{ background: "#fff" }}
+              />
+              <TextField
+                fullWidth
+                type="text"
+                className={styles.inputemail}
+                placeholder="Entre votre nom d'utulisateur"
+                value={username}
+                onChange={handleClickUsername}
+                label="Nom d'utulisateur:"
+                variant="filled"
+                style={{ background: "#fff" }}
+              />
+              <TextField
+                type="tel"
+                fullWidth
+                className={styles.inputemail}
+                placeholder="06 41 78 58 08"
+                value={phoneNumber}
+                onChange={handleClickPhoneNumber}
+                label="Numéro de téléphone"
+                variant="filled"
+                style={{ background: "#fff" }}
+              />
+
+              <TextField
+                type="email"
+                className={styles.inputemail}
+                placeholder="Entre votre email"
+                value={emailRegister}
+                onChange={handleClickEmail}
+                label="Email"
+                variant="filled"
+                fullWidth
+                style={{ background: "#fff" }}
+              />
+              <TextField
+                type="password"
+                fullWidth
+                className={styles.inputemail}
+                placeholder="Entre votre mot de passe"
+                value={passwordRegister}
+                onChange={handleClickPassword}
+                label="Mot de passe"
+                variant="filled"
+                style={{ background: "#fff" }}
+
+              />
+              <div className={styles.bottomBox}>
+                <div className={styles.connexion} onClick={handleValidateRegister}>
+                  Je crée mon compte
+                </div>
+                <div className={styles.register} onClick={navigateLogin}>
+                  J'ai déja un compte ?
+                </div>
+              </div>
             </div>
           </div>
         </div>
+        <div className={styles.right}>
+          <img src={test} className={styles.imgStyle} />
+        </div>
       </div>
-    </div>
+    </div >
   );
 };
 export default View;

@@ -27,7 +27,7 @@ const View: React.FC<Props> = ({
         <div className={[checkMessage ? styles.message : styles.messageCheck].join(' ')}>
           {messageChat.message}
         </div>
-        <div className={styles.hoursBox}>
+        <div className={[checkMessage ? styles.hoursBox : styles.hoursbox2].join(' ')}>
           Envoyé a {heure} : {minute}
         </div>
       </div>

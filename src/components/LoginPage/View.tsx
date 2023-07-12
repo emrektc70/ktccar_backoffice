@@ -56,9 +56,7 @@ const View: React.FC<Props> = ({
           </div>
         </div>
         <div className={styles.right}>
-          <div>
-            <img src={porsche3} className={styles.imgStyle} />
-          </div>
+          <img src={porsche3} className={styles.imgStyle} />
         </div>
       </div>
     </div >

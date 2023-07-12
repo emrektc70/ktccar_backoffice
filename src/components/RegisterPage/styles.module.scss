@@ -1,0 +1,191 @@
+.boxRegister {
+    //position: absolute;
+
+    // background-color: #6F6F6F;
+    border-radius: 20px;
+    width: 450px;
+    height: 665px;
+
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    max-width: 100vw;
+    max-height: 100vh;
+    height: 100vh;
+}
+
+.left {
+    /*  position: absolute;
+    left: 35%;
+    top: 20%; */
+    /*     background-color: #6F6F6F;
+    border-radius: 20px;
+    width: 450px;
+    height: 370px; */
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #ababab;
+    border-right: #fff 2px solid;
+}
+
+.right {
+    background-color: red;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.imgStyle {
+    width: 50vw;
+    max-width: 50vw;
+    height: 100vh;
+    max-height: 100vh;
+}
+
+.title {
+    text-align: center;
+    align-items: center;
+    margin: 8px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.inputBox {
+    margin-top: 24px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+
+}
+
+
+.inputemail {
+    margin: 12px;
+    width: 300px;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 12px;
+    outline: none;
+    border: none;
+    margin: 16px 0;
+    max-width: 350px;
+    // height: 24px;
+}
+
+.inputpassword {
+    margin: 16px;
+    width: 300px;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 12px;
+    outline: none;
+    border: none;
+    margin-top: 24px;
+
+}
+
+
+.resetPassword {
+    color: #ffffff;
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+    margin-bottom: 16px;
+
+    &:active {
+        opacity: 0.5;
+    }
+}
+
+.bottomBox {
+    display: flex;
+    width: 350px;
+    justify-content: space-between;
+    margin-top: 24px;
+    flex-direction: column;
+}
+
+.connexion {
+    background-color: #0166B1;
+    color: #ffffff;
+    width: 325px;
+    padding: 12px;
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+    border-radius: 10px;
+    justify-content: center;
+    margin-bottom: 16px;
+
+    &:hover {
+        opacity: 0.8;
+
+    }
+
+    &:active {
+        opacity: 0.5;
+    }
+
+}
+
+.register {
+    // background-color: #ffffff;
+    //   color: #0166B1;
+    // justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+
+    &:hover {
+        opacity: 0.8;
+
+    }
+
+    &:active {
+        opacity: 0.5;
+    }
+}
+
+
+
+@media screen and (max-width: 600px) {
+
+    .box-register {
+        left: 0%;
+        top: 0%;
+        position: relative;
+        background-color: #6F6F6F;
+        border-radius: 20px;
+        width: 450px;
+        height: 620px;
+        zoom: 85%;
+
+    }
+
+    .inputBox {
+        margin-top: 24px;
+        text-decoration: none;
+        width: 350px;
+        height: 350px;
+        margin-left: 50px;
+
+    }
+
+}
