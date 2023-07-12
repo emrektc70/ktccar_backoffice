@@ -1,7 +1,8 @@
-import "./styles.scss";
 import Separator from "../Separator/view";
 import { useNavigate } from "react-router-dom";
 import TextField from "@mui/material/TextField";
+import styles from "./styles.module.scss";
+
 
 type Props = {
   loginData: VoidFunction;
@@ -18,43 +19,44 @@ const View: React.FC<Props> = ({
   handleChangeEmail,
   handleChangePassword,
 }) => {
-  const navigate = useNavigate();
 
+  const navigate = useNavigate();
   const navigateRegister = () => {
     navigate("/register");
   };
 
   return (
-    <div className="content-login">
-      <div className="box">
-        <div className="title"> Se connecter </div>
+    <div className={styles.contentLogin}>
+      <div className={styles.box}>
+
+        <div className={styles.title}> Se connecter </div>
         <Separator />
-        <div className="inputBox">
-          <TextField label="email" variant="filled" className="inputemail" value={email} onChange={handleChangeEmail}
+        <div className={styles.inputBox}>
+          <TextField label="email" variant="filled" className={styles.inputemail} value={email} onChange={handleChangeEmail}
             style={{ background: "#fff" }} fullWidth
 
           />
-          <div className="boxPassword">
-            <TextField label="Mot de passe" variant="filled" className="inputpassword"
+          <div className={styles.boxPassword}>
+            <TextField label="Mot de passe" variant="filled" className={styles.inputpassword}
               value={password} onChange={handleChangePassword} style={{ background: "#fff" }} fullWidth type="password" />
           </div>
 
-          <div className="resetPassword"> Mot de passe oublié</div>
-          <div className="test">
+          <div className={styles.resetPassword}> Mot de passe oublié</div>
+          <div className={styles.test} >
             <Separator />
           </div>
-          <div className="bottomBox">
-            <div className="register" onClick={navigateRegister}>
+          <div className={styles.bottomBox}>
+            <div className={styles.register} onClick={navigateRegister}>
               Créer un compte
             </div>
 
-            <div className="connexion" onClick={loginData}>
+            <div className={styles.connexion} onClick={loginData}>
               Se connecter
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 };
 export default View;
