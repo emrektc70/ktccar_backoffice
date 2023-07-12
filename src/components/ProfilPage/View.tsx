@@ -1,6 +1,7 @@
 import styles from "./styles.module.scss";
 import MenuBar from "../MenuBar";
 import { TextField, Button } from "@material-ui/core";
+import profil from './assets/profil.png'
 
 type Props = {
   handleClickSignOut: VoidFunction;
@@ -18,6 +19,7 @@ const View: React.FC<Props> = ({ handleClickSignOut, userName, lastName, firstNa
       </div>
       <div className={styles.title}>
         <div>Mon profil </div>
+        <img src={profil} width={56} height={56} />
       </div>
       <div className={styles.form}>
         <div className={styles.name}>

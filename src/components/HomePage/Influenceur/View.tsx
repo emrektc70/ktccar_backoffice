@@ -1,6 +1,7 @@
 import TitleComp from "../../TitleComp";
 import styles from "./styles.module.scss";
 import send from './assets/send.png'
+import { Link } from "react-router-dom";
 
 type Props = {};
 
@@ -51,7 +52,6 @@ const View: React.FC<Props> = () => {
               Envoyé le email
               <img src={send} width={16} height={16} className={styles.icon} />
             </div>
-
           </div>
         </div>
       </div>

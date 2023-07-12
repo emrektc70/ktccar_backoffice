@@ -41,7 +41,7 @@ const View: React.FC<Props> = ({
             </div>
             :
             <div className={styles.img}>
-              <img src={notGroupe} width={400} height={300} />
+              <img src={notGroupe} width={400} height={300} className={styles.imgStyle} />
               <div className={styles.textStyle}>
                 Pas de groupe a ce nom
               </div>
