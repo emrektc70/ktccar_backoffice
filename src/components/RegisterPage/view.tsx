@@ -1,6 +1,6 @@
 import styles from "./styles.module.scss";
 import Separator from "../Separator/view";
-import test from "./assets/porsche3.jpg"
+import peugeot from "./assets/peugeot.jpg"
 import TextField from "@mui/material/TextField";
 
 
@@ -125,7 +125,7 @@ const View: React.FC<Props> = ({
           </div>
         </div>
         <div className={styles.right}>
-          <img src={test} className={styles.imgStyle} />
+          <img src={peugeot} className={styles.imgStyle} />
         </div>
       </div>
     </div >

@@ -30,8 +30,9 @@ const View: React.FC<Props> = ({
       <div className={styles.box}>
         <div className={styles.left}>
           <div className={styles.title}> Se connecter </div>
-          <Separator />
-          <div className={styles.inputBox}>
+          <div className={styles.test} >
+            <Separator />
+          </div>          <div className={styles.inputBox}>
             <TextField label="email" variant="filled" className={styles.inputemail} value={email} onChange={handleChangeEmail}
               style={{ background: "#fff" }} fullWidth
             />
@@ -40,17 +41,16 @@ const View: React.FC<Props> = ({
                 value={password} onChange={handleChangePassword} style={{ background: "#fff" }} fullWidth type="password" />
             </div>
 
-            <div className={styles.resetPassword}> Mot de passe oublié</div>
-            <div className={styles.test} >
+            {/*  <div className={styles.resetPassword}> Mot de passe oublié</div> */}
+            <div className={styles.separator} >
               <Separator />
             </div>
             <div className={styles.bottomBox}>
-              <div className={styles.register} onClick={navigateRegister}>
-                Créer un compte
-              </div>
-
               <div className={styles.connexion} onClick={loginData}>
                 Se connecter
+              </div>
+              <div className={styles.register} onClick={navigateRegister}>
+                Je veux créer un compte
               </div>
             </div>
           </div>

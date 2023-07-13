@@ -16,6 +16,7 @@
     max-width: 100vw;
     max-height: 100vh;
     height: 100vh;
+    overflow: hidden;
 }
 
 .left {
@@ -165,7 +166,7 @@
 
 
 
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) {
 
     .box-register {
         left: 0%;
@@ -188,4 +189,14 @@
 
     }
 
+} */
+
+@media(max-width:600px) {
+    .right {
+        display: none;
+    }
+
+    .left {
+        width: 100vw
+    }
 }
