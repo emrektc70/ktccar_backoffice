@@ -71,6 +71,10 @@ const ViewModel: React.FC<Props> = ({
     [group_id, groupes]);
 
   const dateGroupe = useMemo(() => {
+    if (!groupeDetails || groupeDetails.length === 0) {
+      window.location.href = '/chat';
+      return ''; // Valeur par défaut ou vide
+    }
     const date = groupeDetails[0].createdAt;
     const formatedDate = new Date(date);
     const day = formatedDate.getDate().toString().padStart(2, '0');
@@ -78,6 +82,7 @@ const ViewModel: React.FC<Props> = ({
     const year = formatedDate.getFullYear();
     return `${day}/${month}/${year}`;
   }, [groupeDetails]);
+
 
 
 
