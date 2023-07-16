@@ -30,6 +30,8 @@ const ViewModel: React.FC<Props> = ({ children, isLog, token }) => {
     if (!isPublicRoute && !getToken) {
       navigation(`/login`)
     }
+    if (!sessionStorage.getItem('token')) navigation('/login')
+
     setCheckIsLog(false)
   }, [checkIsLog, isLog, isPublicRoute, navigation, pathName]);
 

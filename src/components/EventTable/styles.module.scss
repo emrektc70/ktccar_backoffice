@@ -47,3 +47,25 @@
     font-size: 12px;
     opacity: 0.9;
 }
+
+@media(max-width:600px) {
+    .imgEvent {
+        width: 200px !important;
+        height: 200px !important;
+    }
+
+    .content {
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 16px 0
+    }
+
+    .description,
+    .title,
+    .date {
+        text-align: center;
+        justify-content: center;
+    }
+}
