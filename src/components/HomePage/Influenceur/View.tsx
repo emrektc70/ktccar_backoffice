@@ -48,10 +48,12 @@ const View: React.FC<Props> = () => {
             </div>
           </div>
           <div className={styles.circleSend}>
-            <div className={styles.emailSend}>
-              Envoyé le email
-              <img src={send} width={16} height={16} className={styles.icon} />
-            </div>
+            <Link to={"mailto:motorsportfamily265@gmail.com"} style={{ textDecoration: 'none', color: '#fff' }}>
+              <div className={styles.emailSend}>
+                Envoyé le email
+                <img src={send} width={16} height={16} className={styles.icon} />
+              </div>
+            </Link>
           </div>
         </div>
       </div>
