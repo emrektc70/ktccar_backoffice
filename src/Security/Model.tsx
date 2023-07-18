@@ -30,10 +30,23 @@ const ViewModel: React.FC<Props> = ({ children, isLog, token }) => {
     if (!isPublicRoute && !getToken) {
       navigation(`/login`)
     }
-    // if (!sessionStorage.getItem('token')) navigation('/login')
-
     setCheckIsLog(false)
   }, [checkIsLog, isLog, isPublicRoute, navigation, pathName]);
+
+  /*   useEffect(() => {
+      if (!sessionStorage.getItem('token')) {
+        const desiredPage = sessionStorage.getItem('desiredPage');
+  
+        if (desiredPage === '/login') {
+          navigation(PageEnum.LOGIN);
+        } else if (desiredPage === '/register') {
+          navigation(PageEnum.REGISTER);
+        } else {
+          navigation(PageEnum.HOME);
+        }
+      }
+    }, [navigation]); */
+
 
   useEffect(() => {
     if (isLog && !checkIsLog) {
