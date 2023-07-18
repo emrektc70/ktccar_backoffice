@@ -19,7 +19,8 @@ type Props = {
   isOpen: boolean;
   handleClickPopup: VoidFunction;
   createDate: string | number;
-  nameCreatePersonne: string
+  nameCreatePersonne: string;
+  inputContent: boolean
 };
 
 const View: React.FC<Props> = ({
@@ -33,7 +34,8 @@ const View: React.FC<Props> = ({
   isOpen,
   handleClickPopup,
   createDate,
-  nameCreatePersonne
+  nameCreatePersonne,
+  inputContent
 }) => {
 
   return (
@@ -102,7 +104,7 @@ const View: React.FC<Props> = ({
             className={styles.input}
           />
           <div onClick={handlePostMessages}>
-            <Button variant="outlined">Envoyer</Button>
+            <Button variant="outlined" disabled={inputContent} >Envoyer</Button>
 
           </div>
         </div>

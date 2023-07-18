@@ -26,6 +26,7 @@
     flex-direction: column;
     gap: 16px;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    word-wrap: break-word;
 }
 
 .messageBoxUser {
@@ -37,6 +38,7 @@
     border-radius: 10px;
     display: flex;
     flex-direction: column;
+    word-wrap: break-word;
     gap: 16px;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
@@ -81,5 +83,12 @@
 @media(max-width: 600px) {
     .contentMessage {
         max-width: 80%;
+    }
+
+    .messageBoxUser,
+    .messageBox {
+        width: 100%;
+        max-width: 300px;
+
     }
 }

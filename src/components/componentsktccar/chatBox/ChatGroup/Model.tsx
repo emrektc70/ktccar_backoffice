@@ -37,6 +37,9 @@ const ViewModel: React.FC<Props> = ({
 
   const { idUrl } = useParams()
   const [isOpen, setOpen] = useState<boolean>(false)
+  const [inputContent, setInPutContent] = useState<boolean>(false)
+
+
 
   useEffect(() => {
     const idString = group_id.toString();
@@ -101,6 +104,16 @@ const ViewModel: React.FC<Props> = ({
   }, [isOpen])
 
 
+  useEffect(() => {
+    if (message.length === 0 || message.length > 255) {
+      setInPutContent(true)
+    } else {
+      setInPutContent(false)
+    }
+  }, [message, inputContent])
+
+
+  console.log(message.length)
   return (
     <View
       handlePostMessages={handlePostMessages}
@@ -114,6 +127,7 @@ const ViewModel: React.FC<Props> = ({
       handleClickPopup={handleClickPopup}
       createDate={createDate}
       nameCreatePersonne={nameCreatePersonne}
+      inputContent={inputContent}
     />
   )
 

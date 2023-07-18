@@ -132,12 +132,14 @@
   .menuMobile {
     min-height: 100vh;
     max-width: calc(100vw - 32px);
-    position: absolute;
+    position: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 2;
+    overflow-y: hidden;
   }
+
 
   .categorie {
     color: #fff;
