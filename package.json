@@ -2,7 +2,7 @@
   "name": "ktccar_backoffice",
   "version": "0.1.0",
   "private": true,
-    "engines": {
+  "engines": {
     "node": "16.16.0"
   },
   "dependencies": {
@@ -21,6 +21,7 @@
     "@types/react-dom": "^18.0.10",
     "axios": "^1.2.5",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "jwt-decode": "^3.1.2",
     "jwt-decode-es": "^3.0.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
