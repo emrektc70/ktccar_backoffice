@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 import { Dispatch } from "redux";
-import ViewModel from "./Model";
 import { changeRegisterFields, postRegister } from "../../actions/register";
+import ViewModel from "./Model";
 
 // eslint-disable-next-line no-unused-vars
 const mapStateToProps = (state: any) => ({
