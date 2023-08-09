@@ -1,6 +1,3 @@
-import { useLocation } from "react-router-dom";
-import Test from "../page/test";
-import styles from "./styles.module.scss";
 
 type Props = {
   children: React.ReactNode;
