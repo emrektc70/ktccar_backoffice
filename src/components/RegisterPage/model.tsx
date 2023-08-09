@@ -35,6 +35,7 @@ const ViewModel: React.FC<Props> = ({
     },
     [changeRegisterFields]
   );
+  console.log('salut')
   const handleClickEmail = useCallback(
     (e: React.BaseSyntheticEvent) => {
       const value = e.target.value;
