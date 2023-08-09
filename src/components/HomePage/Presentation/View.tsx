@@ -12,7 +12,7 @@ const View: React.FC<Props> = () => {
         <TitleComp title={"PASSIONNÉ D'AUTOMOBILE ?"} />
         <div className={styles.box}>
           <div className={styles.left}>
-            <img src={passionne} className={styles.image} />
+            <img src={passionne} className={styles.image} alt="" />
           </div>
           <div className={styles.separator} />
           <div className={styles.right}>

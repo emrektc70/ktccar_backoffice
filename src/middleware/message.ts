@@ -3,7 +3,6 @@ import {
   POST_MESSAGES,
   changeMessageFields,
   getMessages,
-  postMessages,
 } from "../actions/message";
 import httpGetMessage from "../api/message/httpGetMessageId";
 import httpPostMessages from "../api/message/httpPostMessages";

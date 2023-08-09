@@ -1,4 +1,3 @@
-import App from "../App";
 import Test from "../components/Testcomp/View";
 
 const test = () => {

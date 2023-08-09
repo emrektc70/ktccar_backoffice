@@ -51,7 +51,7 @@ const View: React.FC<Props> = () => {
             <Link to={"mailto:motorsportfamily265@gmail.com"} style={{ textDecoration: 'none', color: '#fff' }}>
               <div className={styles.emailSend}>
                 Envoyé le email
-                <img src={send} width={16} height={16} className={styles.icon} />
+                <img src={send} width={16} height={16} className={styles.icon} alt="" />
               </div>
             </Link>
           </div>

@@ -19,7 +19,7 @@ const View: React.FC<Props> = ({ handleClickSignOut, userName, lastName, firstNa
       </div>
       <div className={styles.title}>
         <div>Mon profil </div>
-        <img src={profil} width={56} height={56} />
+        <img src={profil} width={56} height={56} alt="" />
       </div>
       <div className={styles.form}>
         <div className={styles.name}>

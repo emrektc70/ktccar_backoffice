@@ -33,7 +33,7 @@ const View: React.FC<Props> = ({ events }) => {
           </div> :
           <div>
             <div>
-              <img src={notEvent} width={330} height={280} />
+              <img src={notEvent} width={330} height={280} alt="" />
             </div>
             Il n'y a pas d'eventement disponible
           </div>

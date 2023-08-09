@@ -32,7 +32,7 @@ const View: React.FC<Props> = ({
     <div className={styles.menuContent}>
       <div className={styles.contentMenuPhone} >
         <div className={styles.burgerLogo}>
-          <img src={logo} width={140} height={140} />
+          <img src={logo} width={140} height={140} alt="" />
         </div>
         <div className={styles.menuBurger} onClick={handleOpenMenu}>
           <img src={menu} alt="Menu" width={40} height={40} />

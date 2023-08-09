@@ -1,13 +1,12 @@
 import "./styles.module.scss";
 import View from "./View";
-import { useEffect, useMemo } from "react";
+import { useMemo } from "react";
 
 type Props = {
 
 };
 
-const ViewModel: React.FC<Props> = ({
-}) => {
+const ViewModel: React.FC<Props> = () => {
 
   const token = sessionStorage.getItem('token')
   const tokenCheck = useMemo(() => {

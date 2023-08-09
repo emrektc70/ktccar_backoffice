@@ -1,5 +1,4 @@
 import View from "./View";
-import { useEffect } from "react";
 
 type Props = {
   title: string

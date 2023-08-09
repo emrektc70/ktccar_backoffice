@@ -125,7 +125,7 @@ const View: React.FC<Props> = ({
           </div>
         </div>
         <div className={styles.right}>
-          <img src={peugeot} className={styles.imgStyle} />
+          <img src={peugeot} className={styles.imgStyle} alt="" />
         </div>
       </div>
     </div >

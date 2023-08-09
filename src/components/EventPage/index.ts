@@ -1,6 +1,5 @@
 import { connect } from "react-redux";
 import { Dispatch } from "redux";
-import { RootState } from "../../store/store";
 //import { RootState } from "app/store";
 import ViewModel from "./Model";
 import { getEvent } from "../../actions/event";
