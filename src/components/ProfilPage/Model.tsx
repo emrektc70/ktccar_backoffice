@@ -55,8 +55,7 @@ const ViewModel: React.FC<Props> = ({
     localStorage.clear()
     changeSecurityFields('isLog', false)
     navigation(`/login`)
-
-  }, [changeSecurityFields])
+  }, [changeSecurityFields, navigation])
 
   return <View
     handleClickSignOut={handleClickSignOut}

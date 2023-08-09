@@ -35,7 +35,7 @@ const View: React.FC<Props> = ({ tokenCheck, token }) => {
           }
         </div>
         <div className={styles.imageDetails}>
-          <img className={styles.image} src={bmw} alt="image" />
+          <img className={styles.image} src={bmw} alt="" />
         </div>
       </div>
       <div className={styles.containerBox}>
