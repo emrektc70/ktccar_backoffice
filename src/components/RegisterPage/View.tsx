@@ -2,6 +2,7 @@ import styles from "./styles.module.scss";
 import Separator from "../Separator/view";
 import peugeot from "./assets/peugeot.jpg"
 import TextField from "@mui/material/TextField";
+import { Button } from "@material-ui/core";
 
 
 type Props = {
@@ -114,9 +115,12 @@ const View: React.FC<Props> = ({
 
               />
               <div className={styles.bottomBox}>
-                <div className={styles.connexion} onClick={handleValidateRegister}>
+                <Button
+                  variant="contained"
+                  className={styles.connexion}
+                  onClick={handleValidateRegister}>
                   Je crée mon compte
-                </div>
+                </Button>
                 <div className={styles.register} onClick={navigateLogin}>
                   J'ai déja un compte ?
                 </div>

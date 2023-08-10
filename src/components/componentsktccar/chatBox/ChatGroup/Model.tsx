@@ -113,7 +113,6 @@ const ViewModel: React.FC<Props> = ({
   }, [message, inputContent])
 
 
-  console.log(message.length)
   return (
     <View
       handlePostMessages={handlePostMessages}

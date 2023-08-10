@@ -1,5 +1,7 @@
 import { POST_REGISTER, changeRegisterFields } from "../actions/register";
 import postRegister from "../api/register/postRegister";
+import getLogin from "../api/authentification/getLogin";
+import { changeSecurityFields } from "../actions/security";
 
 const registerMiddleware =
   (store: any) => (next: any) => async (action: any) => {
@@ -25,6 +27,10 @@ const registerMiddleware =
           store.dispatch(changeRegisterFields("lastName", res.lastName));
           store.dispatch(changeRegisterFields("phoneNumber", res.phoneNumber));
           store.dispatch(changeRegisterFields("username", res.username));
+
+          const loginRes = await getLogin(data.email, data.password);
+          sessionStorage.setItem("token", loginRes.access_token);
+          store.dispatch(changeSecurityFields("isLog", true));
           return res;
 
           /*            if (res) {

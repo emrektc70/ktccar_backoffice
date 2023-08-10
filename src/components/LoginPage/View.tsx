@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import TextField from "@mui/material/TextField";
 import styles from "./styles.module.scss";
 import porsche3 from './assets/porsche3.jpg';
+import { Button } from "@material-ui/core";
+
 
 type Props = {
   loginData: VoidFunction;
@@ -46,9 +48,12 @@ const View: React.FC<Props> = ({
               <Separator />
             </div>
             <div className={styles.bottomBox}>
-              <div className={styles.connexion} onClick={loginData}>
-                Se connecter
-              </div>
+              <Button
+                variant="contained"
+                className={styles.connexion}
+                onClick={loginData}>
+                Je crée mon compte
+              </Button>
               <div className={styles.register} onClick={navigateRegister}>
                 Je veux créer un compte
               </div>

@@ -35,7 +35,6 @@ const ViewModel: React.FC<Props> = ({
     },
     [changeRegisterFields]
   );
-  console.log('salut')
   const handleClickEmail = useCallback(
     (e: React.BaseSyntheticEvent) => {
       const value = e.target.value;
@@ -57,13 +56,19 @@ const ViewModel: React.FC<Props> = ({
     },
     [changeRegisterFields]
   );
+
   const handleClickPhoneNumber = useCallback(
     (e: React.BaseSyntheticEvent) => {
       const value = e.target.value;
-      changeRegisterFields("phoneNumber", value);
+      const numericRegex = /^\d*$/; // Expression régulière pour vérifier si la chaîne contient uniquement des chiffres
+
+      if (numericRegex.test(value)) {
+        changeRegisterFields("phoneNumber", value);
+      }
     },
     [changeRegisterFields]
   );
+
   const handleClickUsername = useCallback(
     (e: React.BaseSyntheticEvent) => {
       const value = e.target.value;
