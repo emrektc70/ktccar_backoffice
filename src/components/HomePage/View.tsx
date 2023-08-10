@@ -21,7 +21,7 @@ const View: React.FC<Props> = ({ tokenCheck, token }) => {
         <div className={styles.textContent}>
           <div className={styles.textStyle}>
             <h2 className={styles.textTitle}>KTC CAR</h2>
-            <h3>KTC CAR, site pour les passionnés d'automobiles.</h3>
+            <h3>Votre destination en ligne pour les passionnés d'automobiles.</h3>
           </div>
           {
             token ?

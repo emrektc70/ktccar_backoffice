@@ -3,7 +3,7 @@ import axios from "axios";
 const getLogin = async (email: string, password: string) => {
   try {
     const response = await axios.post(
-      "https://ktccarapp-af38166885ff.herokuapp.com/auth/login",
+      `${process.env.REACT_APP_API_BASE_URL}/auth/login`,
       {
         email,
         password,

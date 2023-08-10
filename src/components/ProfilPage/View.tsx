@@ -35,9 +35,9 @@ const View: React.FC<Props> = ({ handleClickSignOut, userName, lastName, firstNa
           <TextField type="text" className={styles.inputProfil} value={firstName} />
         </div>
         <div className={styles.btnAction}>
-          <Button variant="outlined" className={styles.button} onClick={undefined}>
+          {/*    <Button variant="outlined" className={styles.button} onClick={undefined}>
             Modifier
-          </Button>
+          </Button> */}
           <Button variant="contained" className={styles.button} onClick={handleClickSignOut}>
             se déconnecter
           </Button>

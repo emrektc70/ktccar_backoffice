@@ -1,5 +1,7 @@
 import TitleComp from "../../TitleComp";
 import styles from "./styles.module.scss";
+import { Link } from "react-router-dom";
+
 
 const boxHome = () => {
   return (
@@ -10,30 +12,25 @@ const boxHome = () => {
 
       <div className={styles.boxContainers}>
         <div className={styles.box1}>
-          <h3 className={styles.titleBox}> Les évenements</h3>
-          <p className={styles.pBox}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere,
-            nostrum unde dolorum hic officia iure minus praesentium sit porro
-            perspiciatis, asperiores natus laboriosam. Nulla officia, dolore
-            ipsa voluptas optio nisi.
-          </p>
+          <Link to={"/événement"} style={{ textDecoration: 'none' }}>
+            <h3 className={styles.titleBox}> Les évenements</h3>
+            <p className={styles.pBox}>
+              Les événements représentent les actualités du monde de l'automobile, incluant les nouveaux arrivages, informations fraîches et nouvelles technologies. De plus, si vous possédez une communauté et que vous souhaitez organiser un rassemblement, vous pouvez contacter notre équipe afin que vous puissiez annoncer vos événements.
+            </p>
+          </Link>
         </div>
         <div className={styles.box2}>
-          <h3 className={styles.titleBox}>Discuter des membres </h3>
-          <p className={styles.pBox}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
-            doloremque beatae veniam fuga maxime sequi temporibus itaque.
-            Consequatur reiciendis vitae dicta eum debitis. Amet dolorem esse
-            labore, fugit magni laboriosam.
-          </p>
+          <Link to={"/chat"} style={{ textDecoration: 'none' }}>
+            <h3 className={styles.titleBox}>Interagir avec les membres </h3>
+            <p className={styles.pBox}>
+              Notre application possède des groupes qui vous mettent en relation avec d'autres passionnés. Ces groupes sont ouverts afin que vous puissiez collaborer et communiquer entre vous tout en vous respectant.
+            </p>
+          </Link>
         </div>
         <div className={styles.box3}>
-          <h3 className={styles.titleBox}>Nous conatcter ici </h3>
+          <h3 className={styles.titleBox}>Règles à respecter. </h3>
           <p className={styles.pBox}>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque
-            sequi eveniet molestias laborum voluptatibus, corporis soluta.
-            Fugiat neque mollitia vero unde in, est aut aperiam rem iste
-            obcaecati vitae repudiandae!
+            Respectez les autres membres en utilisant un langage approprié et respectueux. En cas de problème, n'hésitez pas à contacter notre équipe pour une résolution adéquate
           </p>
         </div>
       </div>

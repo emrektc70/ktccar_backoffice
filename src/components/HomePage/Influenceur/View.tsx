@@ -43,7 +43,7 @@ const View: React.FC<Props> = () => {
                 Etape: 3
               </div>
               <div className={styles.context}>
-                Comminque les informations necaissaire
+                Communiquez les informations nécessaires.
               </div>
             </div>
           </div>
