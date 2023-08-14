@@ -9,6 +9,7 @@ type Props = {
 
 const ViewModel: React.FC<Props> = ({ getGroupes, groupes, postGroupeId }) => {
   const [searchValue, setSearchValue] = useState("");
+  const [isOpen, setOpen] = useState<boolean>(false)
 
   useEffect(() => {
     getGroupes();
@@ -42,12 +43,19 @@ const ViewModel: React.FC<Props> = ({ getGroupes, groupes, postGroupeId }) => {
     setSearchValue(event.target.value);
   }, []);
 
+
+  const handleClickPopup = useCallback(() => {
+    setOpen(!isOpen);
+  }, [isOpen])
+
   return (
     <View
       groupes={groupes}
       handleSearchChange={handleSearchChange}
       filteredGroupes={filteredGroupes}
       searchValue={searchValue}
+      isOpen={isOpen}
+      handleClickPopup={handleClickPopup}
     />
   );
 };

@@ -75,7 +75,8 @@ const View: React.FC<Props> = ({
               <DialogActions>
                 <Button onClick={handleClickPopup}>Fermer</Button>
               </DialogActions>
-            </Dialog>  </div>
+            </Dialog>
+          </div>
         </div>
       </div>
       {

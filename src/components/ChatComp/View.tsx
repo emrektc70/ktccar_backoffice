@@ -4,26 +4,31 @@ import ChatBox from "../componentsktccar/chatBox";
 import { TextField } from "@material-ui/core";
 import TitleComp from "../TitleComp";
 import notGroupe from './assets/2810772.jpg'
-
+import { Dialog, DialogTitle, DialogContent, DialogContentText, DialogActions } from '@mui/material';
+import { Button } from "@mui/material";
 
 type Props = {
   groupes: any[];
   handleSearchChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   filteredGroupes: any[];
-  searchValue: string
+  searchValue: string;
+  isOpen: boolean;
+  handleClickPopup: VoidFunction
 };
 
 const View: React.FC<Props> = ({
   groupes,
   handleSearchChange,
   filteredGroupes,
-  searchValue
+  searchValue,
+  isOpen,
+  handleClickPopup
 }) => {
   return (
     <div className={styles.chatBar}>
       <MenuBar />
       <div className={styles.chatPage}>
-        <TitleComp title={"Groupe disponibles"} />
+        <TitleComp title={"Groupe disponibles"} onClick={handleClickPopup} icon />
         <div className={styles.searchBar}>
           <TextField
             label="Recherche"
@@ -32,6 +37,18 @@ const View: React.FC<Props> = ({
             onChange={handleSearchChange}
             className={styles.search}
           />
+        </div>
+        <div>
+          <Dialog open={isOpen} onClose={handleClickPopup}>
+            <DialogTitle>Information Groupe</DialogTitle>
+            <DialogContent>
+              <DialogContentText>
+                Les groupes sont créés pour favoriser une communication respectueuse. Si quelqu'un ne respecte pas cette règle, nous vous invitons à prendre des captures d'écran et à les envoyer par e-mail.                                     </DialogContentText>
+            </DialogContent>
+            <DialogActions>
+              <Button onClick={handleClickPopup}>Fermer</Button>
+            </DialogActions>
+          </Dialog>
         </div>
 
         {

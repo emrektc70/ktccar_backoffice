@@ -52,7 +52,7 @@ const View: React.FC<Props> = ({
                 variant="contained"
                 className={styles.connexion}
                 onClick={loginData}>
-                Je crée mon compte
+                Se connecter
               </Button>
               <div className={styles.register} onClick={navigateRegister}>
                 Je veux créer un compte
