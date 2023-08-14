@@ -33,6 +33,13 @@ const ViewModel: React.FC<Props> = ({ children, isLog, token }) => {
     setCheckIsLog(false)
   }, [checkIsLog, isLog, isPublicRoute, navigation, pathName]);
 
+
+  useEffect(() => {
+    if (isLog && !checkIsLog) {
+      navigation(`/`)
+    }
+  }, [isLog, checkIsLog, navigation])
+
   /*   useEffect(() => {
       if (!sessionStorage.getItem('token')) {
         const desiredPage = sessionStorage.getItem('desiredPage');
@@ -48,11 +55,6 @@ const ViewModel: React.FC<Props> = ({ children, isLog, token }) => {
     }, [navigation]); */
 
 
-  useEffect(() => {
-    if (isLog && !checkIsLog) {
-      navigation(`/`)
-    }
-  }, [isLog, checkIsLog, navigation])
 
   return (
     <View isLog={isLog} isPublicRoute={isPublicRoute} checkIsLog={checkIsLog} >

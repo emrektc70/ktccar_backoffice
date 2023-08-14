@@ -1,5 +1,5 @@
 import styles from "./styles.module.scss";
-import logo from "./assets//bleublanc1.png";
+import logo from "./assets//logo2.png";
 import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import DateRangeOutlinedIcon from '@mui/icons-material/DateRangeOutlined';
@@ -73,7 +73,7 @@ const View: React.FC<Props> = ({
       <div className={styles.content}>
         <div className={styles.fullWidth}>
           <div className={styles.logo} onClick={navigateHome}>
-            <img src={logo} alt="logo" />
+            <img src={logo} alt="logo" width={200} height={200} />
           </div>
           <div className={styles.categorieBox}>
             <div className={styles.categorie} onClick={navigateHome}>
@@ -105,7 +105,7 @@ const View: React.FC<Props> = ({
 
         <div className={styles.average}>
           <div className={styles.logo} onClick={navigateHome}>
-            <img src={logo} alt="logo" width={156} height={156} />
+            <img src={logo} alt="logo" width={136} height={136} />
           </div>
           <div className={styles.categorieBox}>
             <div className={styles.categorie} onClick={navigateHome}>

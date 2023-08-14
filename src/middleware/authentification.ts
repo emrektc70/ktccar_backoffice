@@ -9,9 +9,8 @@ const authenticationMiddleware =
         try {
           const { email, password } = store.getState().authentication;
           const res = await getLogin(email, password);
-          sessionStorage.setItem('token', res.access_token);
-          store.dispatch(changeSecurityFields('isLog', true))
-
+          sessionStorage.setItem("token", res.access_token);
+          store.dispatch(changeSecurityFields("isLog", true));
         } catch (error) {
           console.dir(error);
         }
