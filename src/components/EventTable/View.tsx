@@ -11,7 +11,7 @@ type Props = {
 const View: React.FC<Props> = ({ event, formattedDate, startDateFormated }) => {
 
   return (
-    <div className={styles.content}>
+    <div className={styles.contentEvent}>
       <div className={styles.content}>
         <div className={styles.left}>
           {event.image ?

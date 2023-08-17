@@ -47,25 +47,25 @@ const View: React.FC<Props> = ({
               <div className={styles.row}>
                 Accueil
               </div>
-              <HomeOutlinedIcon />
+              <HomeOutlinedIcon style={{ height: '40px', width: '40px' }} />
             </div>
             <div className={styles.categorie} onClick={navigateEvent}>
               <div className={styles.row}>
                 Actualité
               </div>
-              <DateRangeOutlinedIcon />
+              <DateRangeOutlinedIcon style={{ height: '40px', width: '40px' }} />
             </div>
             <div className={styles.categorie} onClick={navigateChat}>
               <div className={styles.row}>
                 Chat
               </div>
-              <ChatBubbleOutlineOutlinedIcon />
+              <ChatBubbleOutlineOutlinedIcon style={{ height: '40px', width: '40px' }} />
             </div>
             <div className={styles.categorie} onClick={navigateProfil}>
               <div className={styles.row}>
                 Profil
               </div>
-              <AccountBoxOutlinedIcon />
+              <AccountBoxOutlinedIcon style={{ height: '40px', width: '40px' }} />
             </div>
           </div>
         </div>
