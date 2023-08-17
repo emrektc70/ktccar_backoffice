@@ -3,7 +3,7 @@ import styles from "./styles.module.scss";
 import MenuBar from "../../../MenuBar";
 import TextField from '@mui/material/TextField';
 import Message from "./Message";
-import { Button } from "@mui/material";
+import { Button, CircularProgress } from "@mui/material";
 import notmessage from './assets/notsms.jpg'
 import { Dialog, DialogTitle, DialogContent, DialogContentText, DialogActions } from '@mui/material';
 import information from "./assets/i.svg"
@@ -20,7 +20,8 @@ type Props = {
   handleClickPopup: VoidFunction;
   createDate: string | number;
   nameCreatePersonne: string;
-  inputContent: boolean
+  inputContent: boolean;
+  loader: boolean
 };
 
 const View: React.FC<Props> = ({
@@ -35,12 +36,14 @@ const View: React.FC<Props> = ({
   handleClickPopup,
   createDate,
   nameCreatePersonne,
-  inputContent
-}) => {
+  inputContent,
+  loader
 
+}) => {
   return (
     <div>
       <MenuBar />
+
       <div className={styles.content}>
         <div className={styles.head}>
           <div className={styles.name}>
@@ -79,22 +82,28 @@ const View: React.FC<Props> = ({
           </div>
         </div>
       </div>
-      {
-        messageChat ?
-          <div className={styles.chat}>
-            {
-              messageChat.map((messageChat: any) =>
-                <Message messageChat={messageChat} />
-              )
-            }
-          </div> :
-          <div className={styles.notmessage}>
-            <img src={notmessage} width={600} height={300} className={styles.imageNotMessage} />
-            <div className={styles.styleMessage}>
-              Il n'y a pas de message dans le groupe.
-            </div>
-          </div>
+      {!loader ? <CircularProgress /> :
+        <>
+          {
+            messageChat ?
+              <div className={styles.chat}>
+                {
+                  !messageChat ? <CircularProgress /> :
+                    messageChat.map((messageChat: any) =>
+                      <Message messageChat={messageChat} />
+                    )
+                }
+              </div> :
+              <div className={styles.notmessage}>
+                <img src={notmessage} width={600} height={300} className={styles.imageNotMessage} />
+                <div className={styles.styleMessage}>
+                  Il n'y a pas de message dans le groupe.
+                </div>
+              </div>
+          }
+        </>
       }
+
       <div className={styles.messageInput}>
         <div className={styles.contentInput}>
           <TextField
@@ -104,9 +113,8 @@ const View: React.FC<Props> = ({
             value={message}
             className={styles.input}
           />
-          <div onClick={handlePostMessages}>
-            <Button variant="outlined" disabled={inputContent} >Envoyer</Button>
-
+          <div>
+            <Button variant="outlined" disabled={inputContent} onClick={handlePostMessages} >Envoyer</Button>
           </div>
         </div>
       </div>

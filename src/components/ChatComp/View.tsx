@@ -2,6 +2,8 @@ import styles from "./styles.module.scss";
 import MenuBar from "../MenuBar";
 import ChatBox from "../componentsktccar/chatBox";
 import { TextField } from "@material-ui/core";
+import Select from '@mui/material/Select';
+import MenuItem from '@mui/material/MenuItem';
 import TitleComp from "../TitleComp";
 import notGroupe from './assets/2810772.jpg'
 import { Dialog, DialogTitle, DialogContent, DialogContentText, DialogActions } from '@mui/material';
@@ -13,7 +15,13 @@ type Props = {
   filteredGroupes: any[];
   searchValue: string;
   isOpen: boolean;
-  handleClickPopup: VoidFunction
+  handleClickPopup: VoidFunction;
+  sortByMembers: boolean;
+  sortByAlphabet: boolean;
+  setSortByMembers: any;
+  setSortByAlphabet: any;
+  handleClickNumberFilter: VoidFunction;
+  handleClickAlphabetFilter: VoidFunction;
 };
 
 const View: React.FC<Props> = ({
@@ -22,7 +30,13 @@ const View: React.FC<Props> = ({
   filteredGroupes,
   searchValue,
   isOpen,
-  handleClickPopup
+  handleClickPopup,
+  sortByMembers,
+  sortByAlphabet,
+  setSortByMembers,
+  setSortByAlphabet,
+  handleClickNumberFilter,
+  handleClickAlphabetFilter
 }) => {
   return (
     <div className={styles.chatBar}>
@@ -50,7 +64,24 @@ const View: React.FC<Props> = ({
             </DialogActions>
           </Dialog>
         </div>
-
+        <div className={styles.boxCheckBox}>
+          <label>
+            <input
+              type="checkbox"
+              checked={sortByMembers}
+              onChange={handleClickNumberFilter}
+            />
+            Trier par nombre de membres
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              checked={sortByAlphabet}
+              onChange={handleClickAlphabetFilter}
+            />
+            Trier par ordre alphabétique
+          </label>
+        </div>
         {
           filteredGroupes.length !== 0 ?
             <div className={styles.boxGroup}>

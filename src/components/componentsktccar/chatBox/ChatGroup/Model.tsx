@@ -38,9 +38,15 @@ const ViewModel: React.FC<Props> = ({
   const { idUrl } = useParams()
   const [isOpen, setOpen] = useState<boolean>(false)
   const [inputContent, setInPutContent] = useState<boolean>(false)
+  const [loader, setLoader] = useState<boolean>(false)
 
+  useEffect(() => {
+    if (group_id) {
+      setLoader(group_id ? true : false)
+    }
+  }, [group_id])
 
-
+  console.log(loader)
   useEffect(() => {
     const idString = group_id.toString();
     if (idString === "0") {
@@ -127,6 +133,7 @@ const ViewModel: React.FC<Props> = ({
       createDate={createDate}
       nameCreatePersonne={nameCreatePersonne}
       inputContent={inputContent}
+      loader={loader}
     />
   )
 
