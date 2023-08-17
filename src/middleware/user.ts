@@ -6,7 +6,6 @@ const userMiddleware = (store: any) => (next: any) => async (action: any) => {
     case GET_USER_ID:
       try {
         const res = await httpGetUser(action.id);
-        console.log(res);
         /*    if (res === undefined) {
           window.location.href = "/login";
         } */

@@ -111,7 +111,7 @@
   .contentMenuPhone {
     position: fixed !important;
     top: 0px;
-    right: 0px;
+    left: 0px;
     width: 100vw;
     height: 72px;
     position: relative;
@@ -162,8 +162,8 @@
   .burgerLogo {
     display: initial;
     position: absolute;
-    left: -20px;
-    top: -24px;
+    left: -12px;
+    top: -30px;
     max-width: 100vw;
     z-index: 60;
 
@@ -175,7 +175,7 @@
   .categorieBox {
     z-index: 8;
     width: 100vw;
-    height: 100vh;
+    height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
