@@ -58,10 +58,11 @@ const ViewModel: React.FC<Props> = ({
   }, [changeSecurityFields, navigation])
 
 
-  useEffect(() => {
-    console.log(lastName, firstName, userName)
-    if (!lastName && !firstName && !userName) handleClickSignOut()
-  }, [firstName, handleClickSignOut, lastName, userName])
+  /*  useEffect(() => {
+     console.log(lastName, firstName, userName)
+     if (!lastName && !firstName && !userName) changeSecurityFields('isLog', false)
+   }, [changeSecurityFields, firstName, lastName, userName])
+   console.log(isLog) */
 
   return <View
     handleClickSignOut={handleClickSignOut}
