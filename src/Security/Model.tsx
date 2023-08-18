@@ -33,8 +33,6 @@ const ViewModel: React.FC<Props> = ({ children, isLog, token }) => {
     setCheckIsLog(false)
   }, [checkIsLog, isLog, isPublicRoute, navigation, pathName]);
 
-  console.log(token)
-  console.log('sessionStorage.getItem' + sessionStorage.getItem('token'))
   useEffect(() => {
     if (isLog && !checkIsLog) {
       navigation(`/`)

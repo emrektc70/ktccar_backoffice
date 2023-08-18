@@ -1,7 +1,7 @@
 import styles from "./styles.module.scss";
 import MenuBar from "../MenuBar";
 import { TextField, Button } from "@material-ui/core";
-import profil from './assets/profil.png'
+import profil from './assets/user.png'
 
 type Props = {
   handleClickSignOut: VoidFunction;

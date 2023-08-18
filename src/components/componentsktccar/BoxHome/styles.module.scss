@@ -4,13 +4,13 @@
 
 .boxContainers {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   height: 300px;
   flex-wrap: wrap;
   gap: 16px;
   width: 950px;
-  max-width: calc(100vw - 80px);
+  max-width: calc(100vw - 350px);
 }
 
 .box1,
@@ -62,7 +62,8 @@
     align-items: center;
     justify-content: center;
     gap: 24px;
-    height: 100% // height: 0;
+    height: 100%; // height: 0;
+    max-width: calc(100vw - 48px);
   }
 
   .nameBox {
@@ -75,5 +76,6 @@
     width: calc(100vw - 24px);
     justify-content: center;
     flex-direction: column;
+    margin-top: 200px;
   }
 }

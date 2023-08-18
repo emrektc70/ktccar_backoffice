@@ -15,7 +15,7 @@
       align-items: center;
       justify-content: space-between;
       width: 100%;
-      max-width: calc(100vw - 16px);
+      max-width: calc(100vw - 350px);
       gap: 8px;
       margin: 32px 0;
       height: 300px;
@@ -92,6 +92,14 @@
       .separator {
           display: none;
       }
+
+      .box {
+          max-width: calc(100vw - 32px);
+      }
+
+      .right {
+          align-items: center;
+      }
   }
 
   @media(max-width:600px) {
@@ -106,6 +114,7 @@
       .right {
           width: 90%;
           max-width: calc(100vw - 32px);
+          align-items: center;
       }
 
       .left {

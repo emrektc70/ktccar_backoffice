@@ -58,6 +58,8 @@ const View: React.FC<Props> = ({
             <DialogContent>
               <DialogContentText>
                 Les groupes sont créés pour favoriser une communication respectueuse. Si quelqu'un ne respecte pas cette règle, nous vous invitons à prendre des captures d'écran et à les envoyer par e-mail.                                     </DialogContentText>
+              <DialogContentText className={styles.textPop}>
+                Les messages sont sauvegardés pendant 24 heures, une fois ce délai écoulé, les messages seront supprimés.              </DialogContentText>
             </DialogContent>
             <DialogActions>
               <Button onClick={handleClickPopup}>Fermer</Button>

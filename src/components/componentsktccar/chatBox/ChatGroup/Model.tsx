@@ -46,7 +46,6 @@ const ViewModel: React.FC<Props> = ({
     }
   }, [group_id])
 
-  console.log(loader)
   useEffect(() => {
     const idString = group_id.toString();
     if (idString === "0") {
