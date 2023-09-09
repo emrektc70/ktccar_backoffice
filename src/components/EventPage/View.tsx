@@ -26,7 +26,7 @@ const View: React.FC<Props> = ({ events, isOpen, handleClickPopup }) => {
       <MenuBar />
       <TitleComp title={'Événements '} icon onClick={handleClickPopup} />
       <div className={styles.contentpageEvent}>
-        <SlidShow images={[img1, img2, img3, img4, img5, img6, img7]} />
+        <SlidShow images={[img1, img2, img3, img5, img6, img7]} />
       </div>
       {
         events.length !== 0 ?

@@ -23,7 +23,7 @@ const View: React.FC<Props> = () => {
               Discutez, échangez des conseils et découvrez les dernières tendances. KTC, la plateforme idéale pour les passionnés de voitures
             </div>
             <Link to={"/chat"} style={{ textDecoration: 'none' }}>
-              <div className={styles.buttonRedirection}> Commencer à parler</div>
+              <div className={styles.buttonRedirection}> Commencer à discuter</div>
             </Link>
           </div>
         </div>

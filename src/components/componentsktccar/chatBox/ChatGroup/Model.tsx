@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import View from "./View";
 import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 type Props = {
   postMessages: VoidFunction;
@@ -35,10 +36,13 @@ const ViewModel: React.FC<Props> = ({
 
 }) => {
 
+  const navigation = useNavigate()
+
   const { idUrl } = useParams()
   const [isOpen, setOpen] = useState<boolean>(false)
   const [inputContent, setInPutContent] = useState<boolean>(false)
   const [loader, setLoader] = useState<boolean>(false)
+  const [callCount, setCallCount] = useState(0);
 
   useEffect(() => {
     if (group_id) {
@@ -116,6 +120,29 @@ const ViewModel: React.FC<Props> = ({
       setInPutContent(false)
     }
   }, [message, inputContent])
+
+
+  // ici la modification
+  // use effect qui fais des call api pour rafraichirs les messages 
+
+  useEffect(() => {
+    const idString = group_id.toString();
+
+    const intervalId = setInterval(() => {
+      setCallCount(callCount + 1);
+      getMessages(idString)
+    }, 7200); // 
+    if (callCount >= 40) {
+      window.location.reload();
+      navigation(`/chat/${idString}/group`)
+
+    }
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, [callCount, getMessages, group_id, navigation]);
+
+
 
 
   return (

@@ -1,4 +1,4 @@
-import { useCallback } from "react";
+import { useCallback, useEffect, useState } from "react";
 import View from "./View";
 import { useNavigate } from "react-router-dom";
 
@@ -24,6 +24,8 @@ const ViewModel: React.FC<Props> = ({
   postRegister,
 }) => {
   const navigate = useNavigate();
+  const [checkForm, setCheckForm] = useState<boolean>(false)
+
   const navigateLogin = () => {
     navigate("/login");
   };
@@ -81,6 +83,15 @@ const ViewModel: React.FC<Props> = ({
     postRegister();
   }, [postRegister]);
 
+  /*   useEffect(() => {
+      if (username.length > 3 && firstName.length > 3 && passwordRegister.length > 3 && phoneNumber.length > 7 && lastName.length > 3) {
+        setCheckForm(false)
+      } else {
+        setCheckForm(true)
+      }
+    }, [firstName.length, lastName.length, passwordRegister.length, phoneNumber.length, username.length, checkForm])
+    console.log(checkForm) */
+
   return (
     <View
       firstName={firstName}
@@ -97,6 +108,7 @@ const ViewModel: React.FC<Props> = ({
       handleClickPhoneNumber={handleClickPhoneNumber}
       handleClickUsername={handleClickUsername}
       handleValidateRegister={handleValidateRegister}
+      checkForm={checkForm}
     />
   );
 };

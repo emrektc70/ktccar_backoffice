@@ -21,7 +21,7 @@ type Props = {
   createDate: string | number;
   nameCreatePersonne: string;
   inputContent: boolean;
-  loader: boolean
+  loader: boolean;
 };
 
 const View: React.FC<Props> = ({
@@ -38,7 +38,6 @@ const View: React.FC<Props> = ({
   nameCreatePersonne,
   inputContent,
   loader
-
 }) => {
   return (
     <div>
@@ -104,10 +103,10 @@ const View: React.FC<Props> = ({
         </>
       }
 
-      <div className={styles.messageInput}>
+      <div className={styles.messageInput} >
         <div className={styles.contentInput}>
           <TextField
-            label="Ecrit t'on message"
+            label="Message"
             variant="standard"
             onChange={handleClickMessage}
             value={message}
@@ -118,7 +117,7 @@ const View: React.FC<Props> = ({
           </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 };
 

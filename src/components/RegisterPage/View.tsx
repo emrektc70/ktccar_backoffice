@@ -20,6 +20,7 @@ type Props = {
   handleClickPhoneNumber: (e: React.BaseSyntheticEvent) => void;
   handleClickUsername: (e: React.BaseSyntheticEvent) => void;
   handleValidateRegister: VoidFunction;
+  checkForm: boolean
 };
 
 const View: React.FC<Props> = ({
@@ -37,6 +38,7 @@ const View: React.FC<Props> = ({
   handleClickPhoneNumber,
   handleClickUsername,
   handleValidateRegister,
+  checkForm
 }) => {
   return (
     <div className={styles.contentRegister}>
@@ -118,6 +120,7 @@ const View: React.FC<Props> = ({
                 <Button
                   variant="contained"
                   className={styles.connexion}
+                  //disabled={checkForm}
                   onClick={handleValidateRegister}>
                   Je crée mon compte
                 </Button>

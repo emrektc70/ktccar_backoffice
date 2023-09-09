@@ -2,8 +2,6 @@ import styles from "./styles.module.scss";
 import MenuBar from "../MenuBar";
 import ChatBox from "../componentsktccar/chatBox";
 import { TextField } from "@material-ui/core";
-import Select from '@mui/material/Select';
-import MenuItem from '@mui/material/MenuItem';
 import TitleComp from "../TitleComp";
 import notGroupe from './assets/2810772.jpg'
 import { Dialog, DialogTitle, DialogContent, DialogContentText, DialogActions } from '@mui/material';
